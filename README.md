@@ -1,19 +1,22 @@
 # Project Description
-- Name: project_us_rates
+- Name: project_markets_dash
 
 # Objective
-- Extract US Rates Yield Curve data from FRED source, build charts - through a Plotly Dash app deployed on render 
-- Data
-  * FRED monthly yields from 3Mth to 30Y US Treasury rates
-- ML - N/A
-- Front-End - Plotly Dash app - deployed on render
+- Build a multi-page app 
+- Extract, parse, and clean data 
+- Compute stats needed
+- Data Visualization using Plotly
+- Front-End: Plotly Dash app - deployed on render
 
 # Data Source
-- FRED pandas datareader
+- FRED pandas datareader: monthly yields from 3Mth to 30Y US Treasury rates
+- yfinance: daily stock prices of S&P 500 companies
+- wikipedia web scraping for S&P 500 tickers, sectors and sub-industries
+- IVV ETF extraction of weights
 
 # Type of analysis
 - Data Analysis / EDA / DataViz / Front-end app
 
 # Live app
-- Please allow c. 20/30sec to launch if the app is on sleep: https://yield-curve-dash.onrender.com/
+- Please allow c. 20/30sec to launch if the app is on sleep: https://markets-dash.onrender.com/
 
