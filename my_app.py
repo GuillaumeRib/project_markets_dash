@@ -12,13 +12,8 @@ from dash.dependencies import Input,Output
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 
-from us_rates import get_data
-from us_rates import data_viz
-
-
-####################################
-# Load data & dfs
-####################################
+from pages import get_data
+from pages import data_viz
 df = get_data.get_rates()
 
 
@@ -26,12 +21,13 @@ df = get_data.get_rates()
 # INIT APP
 ####################################
 dbc_css = ("https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates@V1.0.2/dbc.min.css")
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.YETI, dbc_css],
+app = dash.Dash(__name__,
+                external_stylesheets=[dbc.themes.YETI, dbc_css],
                 meta_tags=[{'name':'viewport',
-                            'content':'width=device-width,initial-scale=1.0'}]
+                            'content':'width=device-width,initial-scale=1.0'}],
+                use_pages=True
                 )
 server=app.server
-
 
 
 ####################################
@@ -42,53 +38,32 @@ load_figure_template("yeti")
 
 
 ####################################
-# FILL Template layout
+# Main Page layout
 ####################################
 
-title = html.H1(children="US Treasury Yield Curve",
-                className=('text-center'))
-as_of = html.Em(children=f'as at: {df.index[-1].year}-{df.index[-1].month}',
-                className=('text-center'))
+title = html.H1(children="US Markets Dashboard",
+                className=('text-center mt-4'))
 
+app.layout = html.Div(
+    [
+        dbc.Row(title),
+        dbc.Row([html.Div(id='button',children=
+            [dbc.Button(page['name'],href=page['path'])
+            for page in dash.page_registry.values()
+            ],
+            className=('text-center mt-4 mb-4'),style={'fontSize':20})]),
+        # Content page
+        dash.page_container
+        ])
 
-
-
-
-app.layout = dbc.Container([
-    dbc.Row([
-        dbc.Col(title,width=12,class_name=('mt-4'))
-    ]),
-    dbc.Row([
-        dbc.Col(as_of,width=12,class_name=('text-center mt-0 mb-4'))
-    ]),
-
-    dbc.Row([
-        dbc.Col(
-            dcc.Graph(figure=data_viz.surface_3d(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6,class_name=('mt-10')),
-
-        dbc.Col(
-            dcc.Graph(figure=data_viz.heatmap(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6)
-
-
-    ]),
-
-
-    dbc.Row([
-        dbc.Col(
-            dcc.Graph(figure=data_viz.line_yield_curve(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6),
-        dbc.Col(
-            dcc.Graph(figure=data_viz.line_spread(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6)
-    ]),
-
-
-],
-                           fluid=True,
-                           className="dbc")
-
+##### Callback not properly setup, but avoid bug with animated chart ... ####
+@app.callback(
+    Output('graph', 'figure'),
+    [Input('button', 'n_clicks')]
+)
+def update_chart(n_clicks):
+    fig = dcc.Graph(id='graph',figure=data_viz.line_yield_curve(df))
+#############################################################################
 
 ####################################
 # RUN the app
