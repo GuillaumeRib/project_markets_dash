@@ -1,0 +1,18 @@
+# data science
+pandas
+numpy
+
+# dataviz
+plotly.express
+dash
+dash-bootstrap-components
+dash_bootstrap_templates
+
+# Finance
+yfinance
+
+# Server
+gunicorn
+
+#other
+datetime
