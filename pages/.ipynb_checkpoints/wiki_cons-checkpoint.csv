@@ -1,0 +1,504 @@
+Symbol,Security,GICS Sector,GICS Sub-Industry
+IPG,The Interpublic Group of Companies,Communication Services,Advertising
+OMC,Omnicom Group,Communication Services,Advertising
+LUMN,Lumen Technologies,Communication Services,Alternative Carriers
+WBD,Warner Bros. Discovery,Communication Services,Broadcasting
+CHTR,Charter Communications,Communication Services,Cable & Satellite
+CMCSA,Comcast,Communication Services,Cable & Satellite
+DISH,Dish Network,Communication Services,Cable & Satellite
+T,AT&T,Communication Services,Integrated Telecommunication Services
+VZ,Verizon,Communication Services,Integrated Telecommunication Services
+ATVI,Activision Blizzard,Communication Services,Interactive Home Entertainment
+EA,Electronic Arts,Communication Services,Interactive Home Entertainment
+TTWO,Take-Two Interactive,Communication Services,Interactive Home Entertainment
+GOOGL,Alphabet Inc. (Class A),Communication Services,Interactive Media & Services
+GOOG,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services
+MTCH,Match Group,Communication Services,Interactive Media & Services
+META,Meta Platforms,Communication Services,Interactive Media & Services
+DIS,Disney,Communication Services,Movies & Entertainment
+FOXA,Fox Corporation (Class A),Communication Services,Movies & Entertainment
+FOX,Fox Corporation (Class B),Communication Services,Movies & Entertainment
+LYV,Live Nation Entertainment,Communication Services,Movies & Entertainment
+NFLX,Netflix,Communication Services,Movies & Entertainment
+PARA,Paramount Global,Communication Services,Movies & Entertainment
+NWSA,News Corp (Class A),Communication Services,Publishing
+NWS,News Corp (Class B),Communication Services,Publishing
+TMUS,T-Mobile US,Communication Services,Wireless Telecommunication Services
+ROST,Ross Stores,Consumer Discretionary,Apparel Retail
+TJX,TJX Companies,Consumer Discretionary,Apparel Retail
+NKE,"Nike, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods"
+RL,Ralph Lauren Corporation,Consumer Discretionary,"Apparel, Accessories & Luxury Goods"
+TPR,"Tapestry, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods"
+VFC,VF Corporation,Consumer Discretionary,"Apparel, Accessories & Luxury Goods"
+APTV,Aptiv,Consumer Discretionary,Auto Parts & Equipment
+BWA,BorgWarner,Consumer Discretionary,Auto Parts & Equipment
+F,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers
+GM,General Motors,Consumer Discretionary,Automobile Manufacturers
+TSLA,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
+AAP,Advance Auto Parts,Consumer Discretionary,Automotive Retail
+KMX,CarMax,Consumer Discretionary,Automotive Retail
+CZR,Caesars Entertainment,Consumer Discretionary,Casinos & Gaming
+LVS,Las Vegas Sands,Consumer Discretionary,Casinos & Gaming
+MGM,MGM Resorts,Consumer Discretionary,Casinos & Gaming
+WYNN,Wynn Resorts,Consumer Discretionary,Casinos & Gaming
+BBY,Best Buy,Consumer Discretionary,Computer & Electronics Retail
+GRMN,Garmin,Consumer Discretionary,Consumer Electronics
+LKQ,LKQ Corporation,Consumer Discretionary,Distributors
+POOL,Pool Corporation,Consumer Discretionary,Distributors
+DG,Dollar General,Consumer Discretionary,General Merchandise Stores
+DLTR,Dollar Tree,Consumer Discretionary,General Merchandise Stores
+TGT,Target Corporation,Consumer Discretionary,General Merchandise Stores
+MHK,Mohawk Industries,Consumer Discretionary,Home Furnishings
+HD,Home Depot (The),Consumer Discretionary,Home Improvement Retail
+LOW,Lowe's,Consumer Discretionary,Home Improvement Retail
+DHI,D.R. Horton,Consumer Discretionary,Homebuilding
+LEN,Lennar,Consumer Discretionary,Homebuilding
+NVR,"NVR, Inc.",Consumer Discretionary,Homebuilding
+PHM,PulteGroup,Consumer Discretionary,Homebuilding
+CCL,Carnival,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+HLT,Hilton Worldwide,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+MAR,Marriott International,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+RCL,Royal Caribbean Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+WHR,Whirlpool Corporation,Consumer Discretionary,Household Appliances
+NWL,Newell Brands,Consumer Discretionary,Housewares & Specialties
+AMZN,Amazon,Consumer Discretionary,Internet & Direct Marketing Retail
+BKNG,Booking Holdings,Consumer Discretionary,Internet & Direct Marketing Retail
+EBAY,eBay,Consumer Discretionary,Internet & Direct Marketing Retail
+ETSY,Etsy,Consumer Discretionary,Internet & Direct Marketing Retail
+EXPE,Expedia Group,Consumer Discretionary,Internet & Direct Marketing Retail
+HAS,Hasbro,Consumer Discretionary,Leisure Products
+CMG,Chipotle Mexican Grill,Consumer Discretionary,Restaurants
+DRI,Darden Restaurants,Consumer Discretionary,Restaurants
+DPZ,Domino's,Consumer Discretionary,Restaurants
+MCD,McDonald's,Consumer Discretionary,Restaurants
+SBUX,Starbucks,Consumer Discretionary,Restaurants
+YUM,Yum! Brands,Consumer Discretionary,Restaurants
+AZO,AutoZone,Consumer Discretionary,Specialty Stores
+BBWI,"Bath & Body Works, Inc.",Consumer Discretionary,Specialty Stores
+GPC,Genuine Parts Company,Consumer Discretionary,Specialty Stores
+ORLY,O'Reilly Auto Parts,Consumer Discretionary,Specialty Stores
+TSCO,Tractor Supply,Consumer Discretionary,Specialty Stores
+ULTA,Ulta Beauty,Consumer Discretionary,Specialty Stores
+ADM,ADM,Consumer Staples,Agricultural Products
+TAP,Molson Coors Beverage Company,Consumer Staples,Brewers
+BF-B,Brown–Forman,Consumer Staples,Distillers & Vintners
+STZ,Constellation Brands,Consumer Staples,Distillers & Vintners
+WBA,Walgreens Boots Alliance,Consumer Staples,Drug Retail
+SYY,Sysco,Consumer Staples,Food Distributors
+KR,Kroger,Consumer Staples,Food Retail
+CHD,Church & Dwight,Consumer Staples,Household Products
+CLX,Clorox,Consumer Staples,Household Products
+CL,Colgate-Palmolive,Consumer Staples,Household Products
+KMB,Kimberly-Clark,Consumer Staples,Household Products
+COST,Costco,Consumer Staples,Hypermarkets & Super Centers
+WMT,Walmart,Consumer Staples,Hypermarkets & Super Centers
+CPB,Campbell Soup Company,Consumer Staples,Packaged Foods & Meats
+CAG,Conagra Brands,Consumer Staples,Packaged Foods & Meats
+GIS,General Mills,Consumer Staples,Packaged Foods & Meats
+HSY,Hershey's,Consumer Staples,Packaged Foods & Meats
+HRL,Hormel Foods,Consumer Staples,Packaged Foods & Meats
+K,Kellogg's,Consumer Staples,Packaged Foods & Meats
+KHC,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
+LW,Lamb Weston,Consumer Staples,Packaged Foods & Meats
+MKC,McCormick & Company,Consumer Staples,Packaged Foods & Meats
+MDLZ,Mondelez International,Consumer Staples,Packaged Foods & Meats
+SJM,The J.M. Smucker Company,Consumer Staples,Packaged Foods & Meats
+TSN,Tyson Foods,Consumer Staples,Packaged Foods & Meats
+EL,The Estée Lauder Companies,Consumer Staples,Personal Products
+PG,Procter & Gamble,Consumer Staples,Personal Products
+KO,The Coca-Cola Company,Consumer Staples,Soft Drinks
+KDP,Keurig Dr Pepper,Consumer Staples,Soft Drinks
+MNST,Monster Beverage,Consumer Staples,Soft Drinks
+PEP,PepsiCo,Consumer Staples,Soft Drinks
+MO,Altria,Consumer Staples,Tobacco
+PM,Philip Morris International,Consumer Staples,Tobacco
+CVX,Chevron Corporation,Energy,Integrated Oil & Gas
+XOM,ExxonMobil,Energy,Integrated Oil & Gas
+HES,Hess Corporation,Energy,Integrated Oil & Gas
+BKR,Baker Hughes,Energy,Oil & Gas Equipment & Services
+HAL,Halliburton,Energy,Oil & Gas Equipment & Services
+SLB,Schlumberger,Energy,Oil & Gas Equipment & Services
+APA,APA Corporation,Energy,Oil & Gas Exploration & Production
+COP,ConocoPhillips,Energy,Oil & Gas Exploration & Production
+CTRA,Coterra,Energy,Oil & Gas Exploration & Production
+DVN,Devon Energy,Energy,Oil & Gas Exploration & Production
+FANG,Diamondback Energy,Energy,Oil & Gas Exploration & Production
+EOG,EOG Resources,Energy,Oil & Gas Exploration & Production
+EQT,EQT,Energy,Oil & Gas Exploration & Production
+MRO,Marathon Oil,Energy,Oil & Gas Exploration & Production
+OXY,Occidental Petroleum,Energy,Oil & Gas Exploration & Production
+PXD,Pioneer Natural Resources,Energy,Oil & Gas Exploration & Production
+MPC,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing
+PSX,Phillips 66,Energy,Oil & Gas Refining & Marketing
+VLO,Valero Energy,Energy,Oil & Gas Refining & Marketing
+KMI,Kinder Morgan,Energy,Oil & Gas Storage & Transportation
+OKE,ONEOK,Energy,Oil & Gas Storage & Transportation
+TRGP,Targa Resources,Energy,Oil & Gas Storage & Transportation
+WMB,Williams Companies,Energy,Oil & Gas Storage & Transportation
+AMP,Ameriprise Financial,Financials,Asset Management & Custody Banks
+BLK,BlackRock,Financials,Asset Management & Custody Banks
+BK,BNY Mellon,Financials,Asset Management & Custody Banks
+BEN,Franklin Templeton,Financials,Asset Management & Custody Banks
+IVZ,Invesco,Financials,Asset Management & Custody Banks
+NTRS,Northern Trust,Financials,Asset Management & Custody Banks
+STT,State Street Corporation,Financials,Asset Management & Custody Banks
+TROW,T. Rowe Price,Financials,Asset Management & Custody Banks
+AXP,American Express,Financials,Consumer Finance
+COF,Capital One,Financials,Consumer Finance
+DFS,Discover Financial,Financials,Consumer Finance
+SYF,Synchrony Financial,Financials,Consumer Finance
+BAC,Bank of America,Financials,Diversified Banks
+C,Citigroup,Financials,Diversified Banks
+CMA,Comerica,Financials,Diversified Banks
+JPM,JPMorgan Chase,Financials,Diversified Banks
+USB,U.S. Bank,Financials,Diversified Banks
+WFC,Wells Fargo,Financials,Diversified Banks
+CBOE,Cboe Global Markets,Financials,Financial Exchanges & Data
+CME,CME Group,Financials,Financial Exchanges & Data
+FDS,FactSet,Financials,Financial Exchanges & Data
+ICE,Intercontinental Exchange,Financials,Financial Exchanges & Data
+MKTX,MarketAxess,Financials,Financial Exchanges & Data
+MCO,Moody's Corporation,Financials,Financial Exchanges & Data
+MSCI,MSCI,Financials,Financial Exchanges & Data
+NDAQ,"Nasdaq, Inc.",Financials,Financial Exchanges & Data
+SPGI,S&P Global,Financials,Financial Exchanges & Data
+AON,Aon,Financials,Insurance Brokers
+AJG,Arthur J. Gallagher & Co.,Financials,Insurance Brokers
+BRO,Brown & Brown,Financials,Insurance Brokers
+MMC,Marsh McLennan,Financials,Insurance Brokers
+WTW,Willis Towers Watson,Financials,Insurance Brokers
+SCHW,Charles Schwab Corporation,Financials,Investment Banking & Brokerage
+GS,Goldman Sachs,Financials,Investment Banking & Brokerage
+MS,Morgan Stanley,Financials,Investment Banking & Brokerage
+RJF,Raymond James,Financials,Investment Banking & Brokerage
+AFL,Aflac,Financials,Life & Health Insurance
+GL,Globe Life,Financials,Life & Health Insurance
+MET,MetLife,Financials,Life & Health Insurance
+PFG,Principal Financial Group,Financials,Life & Health Insurance
+PRU,Prudential Financial,Financials,Life & Health Insurance
+BRK-B,Berkshire Hathaway,Financials,Multi-Sector Holdings
+AIZ,Assurant,Financials,Multi-line Insurance
+LNC,Lincoln Financial,Financials,Multi-line Insurance
+L,Loews Corporation,Financials,Multi-line Insurance
+ALL,Allstate,Financials,Property & Casualty Insurance
+AIG,American International Group,Financials,Property & Casualty Insurance
+WRB,Berkley,Financials,Property & Casualty Insurance
+CB,Chubb Limited,Financials,Property & Casualty Insurance
+CINF,Cincinnati Financial,Financials,Property & Casualty Insurance
+HIG,Hartford (The),Financials,Property & Casualty Insurance
+PGR,Progressive Corporation,Financials,Property & Casualty Insurance
+TRV,The Travelers Companies,Financials,Property & Casualty Insurance
+CFG,Citizens Financial Group,Financials,Regional Banks
+FITB,Fifth Third Bank,Financials,Regional Banks
+FRC,First Republic Bank,Financials,Regional Banks
+HBAN,Huntington Bancshares,Financials,Regional Banks
+KEY,KeyCorp,Financials,Regional Banks
+MTB,M&T Bank,Financials,Regional Banks
+PNC,PNC Financial Services,Financials,Regional Banks
+RF,Regions Financial Corporation,Financials,Regional Banks
+SBNY,Signature Bank,Financials,Regional Banks
+SIVB,SVB Financial,Financials,Regional Banks
+TFC,Truist,Financials,Regional Banks
+ZION,Zions Bancorporation,Financials,Regional Banks
+ACGL,Arch Capital Group,Financials,Reinsurance
+RE,Everest Re,Financials,Reinsurance
+AMGN,Amgen,Health Care,Biotechnology
+BIIB,Biogen,Health Care,Biotechnology
+GILD,Gilead Sciences,Health Care,Biotechnology
+INCY,Incyte,Health Care,Biotechnology
+MRNA,Moderna,Health Care,Biotechnology
+REGN,Regeneron,Health Care,Biotechnology
+VRTX,Vertex Pharmaceuticals,Health Care,Biotechnology
+ABC,AmerisourceBergen,Health Care,Health Care Distributors
+BMY,Bristol Myers Squibb,Health Care,Health Care Distributors
+CAH,Cardinal Health,Health Care,Health Care Distributors
+HSIC,Henry Schein,Health Care,Health Care Distributors
+MCK,McKesson,Health Care,Health Care Distributors
+WAT,Waters Corporation,Health Care,Health Care Distributors
+ABT,Abbott,Health Care,Health Care Equipment
+A,Agilent Technologies,Health Care,Health Care Equipment
+BAX,Baxter International,Health Care,Health Care Equipment
+BDX,Becton Dickinson,Health Care,Health Care Equipment
+BSX,Boston Scientific,Health Care,Health Care Equipment
+DHR,Danaher Corporation,Health Care,Health Care Equipment
+DXCM,Dexcom,Health Care,Health Care Equipment
+EW,Edwards Lifesciences,Health Care,Health Care Equipment
+HOLX,Hologic,Health Care,Health Care Equipment
+IDXX,Idexx Laboratories,Health Care,Health Care Equipment
+ISRG,Intuitive Surgical,Health Care,Health Care Equipment
+MDT,Medtronic,Health Care,Health Care Equipment
+PKI,PerkinElmer,Health Care,Health Care Equipment
+RMD,ResMed,Health Care,Health Care Equipment
+STE,Steris,Health Care,Health Care Equipment
+SYK,Stryker Corporation,Health Care,Health Care Equipment
+TFX,Teleflex,Health Care,Health Care Equipment
+ZBH,Zimmer Biomet,Health Care,Health Care Equipment
+DVA,DaVita Inc.,Health Care,Health Care Facilities
+HCA,HCA Healthcare,Health Care,Health Care Facilities
+UHS,Universal Health Services,Health Care,Health Care Facilities
+CVS,CVS Health,Health Care,Health Care Services
+LH,LabCorp,Health Care,Health Care Services
+DGX,Quest Diagnostics,Health Care,Health Care Services
+ALGN,Align Technology,Health Care,Health Care Supplies
+COO,CooperCompanies,Health Care,Health Care Supplies
+XRAY,Dentsply Sirona,Health Care,Health Care Supplies
+WST,West Pharmaceutical Services,Health Care,Health Care Supplies
+BIO,Bio-Rad,Health Care,Life Sciences Tools & Services
+TECH,Bio-Techne,Health Care,Life Sciences Tools & Services
+CRL,Charles River Laboratories,Health Care,Life Sciences Tools & Services
+ILMN,Illumina,Health Care,Life Sciences Tools & Services
+IQV,IQVIA,Health Care,Life Sciences Tools & Services
+MTD,Mettler Toledo,Health Care,Life Sciences Tools & Services
+TMO,Thermo Fisher Scientific,Health Care,Life Sciences Tools & Services
+CNC,Centene Corporation,Health Care,Managed Health Care
+CI,Cigna,Health Care,Managed Health Care
+ELV,Elevance Health,Health Care,Managed Health Care
+HUM,Humana,Health Care,Managed Health Care
+MOH,Molina Healthcare,Health Care,Managed Health Care
+UNH,UnitedHealth Group,Health Care,Managed Health Care
+ABBV,AbbVie,Health Care,Pharmaceuticals
+CTLT,Catalent,Health Care,Pharmaceuticals
+LLY,Eli Lilly and Company,Health Care,Pharmaceuticals
+JNJ,Johnson & Johnson,Health Care,Pharmaceuticals
+MRK,Merck & Co.,Health Care,Pharmaceuticals
+OGN,Organon & Co.,Health Care,Pharmaceuticals
+PFE,Pfizer,Health Care,Pharmaceuticals
+VTRS,Viatris,Health Care,Pharmaceuticals
+ZTS,Zoetis,Health Care,Pharmaceuticals
+BA,Boeing,Industrials,Aerospace & Defense
+GD,General Dynamics,Industrials,Aerospace & Defense
+HWM,Howmet Aerospace,Industrials,Aerospace & Defense
+HII,Huntington Ingalls Industries,Industrials,Aerospace & Defense
+LHX,L3Harris,Industrials,Aerospace & Defense
+LMT,Lockheed Martin,Industrials,Aerospace & Defense
+NOC,Northrop Grumman,Industrials,Aerospace & Defense
+RTX,Raytheon Technologies,Industrials,Aerospace & Defense
+TXT,Textron,Industrials,Aerospace & Defense
+TDG,TransDigm Group,Industrials,Aerospace & Defense
+DE,John Deere,Industrials,Agricultural & Farm Machinery
+CHRW,C.H. Robinson,Industrials,Air Freight & Logistics
+EXPD,Expeditors International,Industrials,Air Freight & Logistics
+FDX,FedEx,Industrials,Air Freight & Logistics
+UPS,United Parcel Service,Industrials,Air Freight & Logistics
+ALK,Alaska Air Group,Industrials,Airlines
+AAL,American Airlines Group,Industrials,Airlines
+DAL,Delta Air Lines,Industrials,Airlines
+LUV,Southwest Airlines,Industrials,Airlines
+UAL,United Airlines Holdings,Industrials,Airlines
+AOS,A. O. Smith,Industrials,Building Products
+ALLE,Allegion,Industrials,Building Products
+CARR,Carrier Global,Industrials,Building Products
+FAST,Fastenal,Industrials,Building Products
+JCI,Johnson Controls,Industrials,Building Products
+MAS,Masco,Industrials,Building Products
+TT,Trane Technologies,Industrials,Building Products
+J,Jacobs Solutions,Industrials,Construction & Engineering
+PWR,Quanta Services,Industrials,Construction & Engineering
+CAT,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Trucks
+PCAR,Paccar,Industrials,Construction Machinery & Heavy Trucks
+WAB,Wabtec,Industrials,Construction Machinery & Heavy Trucks
+CTAS,Cintas,Industrials,Diversified Support Services
+CPRT,Copart,Industrials,Diversified Support Services
+LDOS,Leidos,Industrials,Diversified Support Services
+AME,Ametek,Industrials,Electrical Components & Equipment
+ETN,Eaton Corporation,Industrials,Electrical Components & Equipment
+EMR,Emerson Electric,Industrials,Electrical Components & Equipment
+GNRC,Generac,Industrials,Electrical Components & Equipment
+ROK,Rockwell Automation,Industrials,Electrical Components & Equipment
+RSG,Republic Services,Industrials,Environmental & Facilities Services
+ROL,"Rollins, Inc.",Industrials,Environmental & Facilities Services
+WM,Waste Management,Industrials,Environmental & Facilities Services
+RHI,Robert Half,Industrials,Human Resource & Employment Services
+MMM,3M,Industrials,Industrial Conglomerates
+GE,General Electric,Industrials,Industrial Conglomerates
+HON,Honeywell,Industrials,Industrial Conglomerates
+CMI,Cummins,Industrials,Industrial Machinery
+DOV,Dover Corporation,Industrials,Industrial Machinery
+FTV,Fortive,Industrials,Industrial Machinery
+IEX,IDEX Corporation,Industrials,Industrial Machinery
+ITW,Illinois Tool Works,Industrials,Industrial Machinery
+IR,Ingersoll Rand,Industrials,Industrial Machinery
+NDSN,Nordson Corporation,Industrials,Industrial Machinery
+OTIS,Otis Worldwide,Industrials,Industrial Machinery
+PH,Parker Hannifin,Industrials,Industrial Machinery
+PNR,Pentair,Industrials,Industrial Machinery
+SNA,Snap-on,Industrials,Industrial Machinery
+SWK,Stanley Black & Decker,Industrials,Industrial Machinery
+GWW,W. W. Grainger,Industrials,Industrial Machinery
+XYL,Xylem Inc.,Industrials,Industrial Machinery
+CSX,CSX,Industrials,Railroads
+NSC,Norfolk Southern Railway,Industrials,Railroads
+UNP,Union Pacific Corporation,Industrials,Railroads
+CSGP,CoStar Group,Industrials,Research & Consulting Services
+EFX,Equifax,Industrials,Research & Consulting Services
+VRSK,Verisk,Industrials,Research & Consulting Services
+URI,United Rentals,Industrials,Trading Companies & Distributors
+JBHT,J.B. Hunt,Industrials,Trucking
+ODFL,Old Dominion,Industrials,Trucking
+ADBE,Adobe Inc.,Information Technology,Application Software
+ANSS,Ansys,Information Technology,Application Software
+ADSK,Autodesk,Information Technology,Application Software
+CDNS,Cadence Design Systems,Information Technology,Application Software
+CDAY,Ceridian,Information Technology,Application Software
+GEN,Gen Digital,Information Technology,Application Software
+INTU,Intuit,Information Technology,Application Software
+ORCL,Oracle Corporation,Information Technology,Application Software
+PAYC,Paycom,Information Technology,Application Software
+PTC,PTC,Information Technology,Application Software
+CRM,Salesforce,Information Technology,Application Software
+SNPS,Synopsys,Information Technology,Application Software
+TYL,Tyler Technologies,Information Technology,Application Software
+ANET,Arista Networks,Information Technology,Communications Equipment
+CSCO,Cisco,Information Technology,Communications Equipment
+FFIV,"F5, Inc.",Information Technology,Communications Equipment
+JNPR,Juniper Networks,Information Technology,Communications Equipment
+MSI,Motorola Solutions,Information Technology,Communications Equipment
+ADP,ADP,Information Technology,Data Processing & Outsourced Services
+BR,Broadridge Financial Solutions,Information Technology,Data Processing & Outsourced Services
+FIS,FIS,Information Technology,Data Processing & Outsourced Services
+FISV,Fiserv,Information Technology,Data Processing & Outsourced Services
+FLT,Fleetcor,Information Technology,Data Processing & Outsourced Services
+GPN,Global Payments,Information Technology,Data Processing & Outsourced Services
+JKHY,Jack Henry & Associates,Information Technology,Data Processing & Outsourced Services
+MA,Mastercard,Information Technology,Data Processing & Outsourced Services
+PAYX,Paychex,Information Technology,Data Processing & Outsourced Services
+PYPL,PayPal,Information Technology,Data Processing & Outsourced Services
+V,Visa Inc.,Information Technology,Data Processing & Outsourced Services
+APH,Amphenol,Information Technology,Electronic Components
+GLW,Corning Inc.,Information Technology,Electronic Components
+ENPH,Enphase,Information Technology,Electronic Components
+KEYS,Keysight,Information Technology,Electronic Equipment & Instruments
+ROP,Roper Technologies,Information Technology,Electronic Equipment & Instruments
+TDY,Teledyne Technologies,Information Technology,Electronic Equipment & Instruments
+TRMB,Trimble Inc.,Information Technology,Electronic Equipment & Instruments
+ZBRA,Zebra Technologies,Information Technology,Electronic Equipment & Instruments
+TEL,TE Connectivity,Information Technology,Electronic Manufacturing Services
+ACN,Accenture,Information Technology,IT Consulting & Other Services
+CTSH,Cognizant,Information Technology,IT Consulting & Other Services
+DXC,DXC Technology,Information Technology,IT Consulting & Other Services
+EPAM,EPAM Systems,Information Technology,IT Consulting & Other Services
+IT,Gartner,Information Technology,IT Consulting & Other Services
+IBM,IBM,Information Technology,IT Consulting & Other Services
+AKAM,Akamai,Information Technology,Internet Services & Infrastructure
+VRSN,Verisign,Information Technology,Internet Services & Infrastructure
+AMAT,Applied Materials,Information Technology,Semiconductor Equipment
+KLAC,KLA Corporation,Information Technology,Semiconductor Equipment
+LRCX,Lam Research,Information Technology,Semiconductor Equipment
+SEDG,SolarEdge,Information Technology,Semiconductor Equipment
+TER,Teradyne,Information Technology,Semiconductor Equipment
+AMD,AMD,Information Technology,Semiconductors
+ADI,Analog Devices,Information Technology,Semiconductors
+AVGO,Broadcom Inc.,Information Technology,Semiconductors
+FSLR,First Solar,Information Technology,Semiconductors
+INTC,Intel,Information Technology,Semiconductors
+MCHP,Microchip Technology,Information Technology,Semiconductors
+MU,Micron Technology,Information Technology,Semiconductors
+MPWR,Monolithic Power Systems,Information Technology,Semiconductors
+NVDA,Nvidia,Information Technology,Semiconductors
+NXPI,NXP Semiconductors,Information Technology,Semiconductors
+ON,ON Semiconductor,Information Technology,Semiconductors
+QRVO,Qorvo,Information Technology,Semiconductors
+QCOM,Qualcomm,Information Technology,Semiconductors
+SWKS,Skyworks Solutions,Information Technology,Semiconductors
+TXN,Texas Instruments,Information Technology,Semiconductors
+FTNT,Fortinet,Information Technology,Systems Software
+MSFT,Microsoft,Information Technology,Systems Software
+NOW,ServiceNow,Information Technology,Systems Software
+CDW,CDW,Information Technology,Technology Distributors
+AAPL,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+HPE,Hewlett Packard Enterprise,Information Technology,"Technology Hardware, Storage & Peripherals"
+HPQ,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals"
+NTAP,NetApp,Information Technology,"Technology Hardware, Storage & Peripherals"
+STX,Seagate Technology,Information Technology,"Technology Hardware, Storage & Peripherals"
+WDC,Western Digital,Information Technology,"Technology Hardware, Storage & Peripherals"
+DOW,Dow Inc.,Materials,Commodity Chemicals
+MLM,Martin Marietta Materials,Materials,Construction Materials
+VMC,Vulcan Materials Company,Materials,Construction Materials
+FCX,Freeport-McMoRan,Materials,Copper
+EMN,Eastman Chemical Company,Materials,Diversified Chemicals
+CF,CF Industries,Materials,Fertilizers & Agricultural Chemicals
+CTVA,Corteva,Materials,Fertilizers & Agricultural Chemicals
+FMC,FMC Corporation,Materials,Fertilizers & Agricultural Chemicals
+MOS,The Mosaic Company,Materials,Fertilizers & Agricultural Chemicals
+NEM,Newmont,Materials,Gold
+APD,Air Products and Chemicals,Materials,Industrial Gases
+LIN,Linde plc,Materials,Industrial Gases
+BALL,Ball Corporation,Materials,Metal & Glass Containers
+AMCR,Amcor,Materials,Paper Packaging
+AVY,Avery Dennison,Materials,Paper Packaging
+IP,International Paper,Materials,Paper Packaging
+PKG,Packaging Corporation of America,Materials,Paper Packaging
+SEE,Sealed Air,Materials,Paper Packaging
+WRK,WestRock,Materials,Paper Packaging
+ALB,Albemarle Corporation,Materials,Specialty Chemicals
+CE,Celanese,Materials,Specialty Chemicals
+DD,DuPont,Materials,Specialty Chemicals
+ECL,Ecolab,Materials,Specialty Chemicals
+IFF,International Flavors & Fragrances,Materials,Specialty Chemicals
+LYB,LyondellBasell,Materials,Specialty Chemicals
+PPG,PPG Industries,Materials,Specialty Chemicals
+SHW,Sherwin-Williams,Materials,Specialty Chemicals
+NUE,Nucor,Materials,Steel
+STLD,Steel Dynamics,Materials,Steel
+PEAK,Healthpeak,Real Estate,Health Care REITs
+VTR,Ventas,Real Estate,Health Care REITs
+WELL,Welltower,Real Estate,Health Care REITs
+HST,Host Hotels & Resorts,Real Estate,Hotel & Resort REITs
+VICI,Vici Properties,Real Estate,Hotel & Resort REITs
+PLD,Prologis,Real Estate,Industrial REITs
+ARE,Alexandria Real Estate Equities,Real Estate,Office REITs
+BXP,Boston Properties,Real Estate,Office REITs
+VNO,Vornado Realty Trust,Real Estate,Office REITs
+CBRE,CBRE Group,Real Estate,Real Estate Services
+AVB,AvalonBay Communities,Real Estate,Residential REITs
+CPT,Camden Property Trust,Real Estate,Residential REITs
+EQR,Equity Residential,Real Estate,Residential REITs
+ESS,Essex Property Trust,Real Estate,Residential REITs
+INVH,Invitation Homes,Real Estate,Residential REITs
+MAA,Mid-America Apartment Communities,Real Estate,Residential REITs
+UDR,"UDR, Inc.",Real Estate,Residential REITs
+FRT,Federal Realty,Real Estate,Retail REITs
+KIM,Kimco Realty,Real Estate,Retail REITs
+O,Realty Income,Real Estate,Retail REITs
+REG,Regency Centers,Real Estate,Retail REITs
+SPG,Simon Property Group,Real Estate,Retail REITs
+AMT,American Tower,Real Estate,Specialized REITs
+CCI,Crown Castle,Real Estate,Specialized REITs
+DLR,Digital Realty,Real Estate,Specialized REITs
+EQIX,Equinix,Real Estate,Specialized REITs
+EXR,Extra Space Storage,Real Estate,Specialized REITs
+IRM,Iron Mountain,Real Estate,Specialized REITs
+PSA,Public Storage,Real Estate,Specialized REITs
+SBAC,SBA Communications,Real Estate,Specialized REITs
+WY,Weyerhaeuser,Real Estate,Specialized REITs
+LNT,Alliant Energy,Utilities,Electric Utilities
+AEP,American Electric Power,Utilities,Electric Utilities
+ED,Consolidated Edison,Utilities,Electric Utilities
+D,Dominion Energy,Utilities,Electric Utilities
+DUK,Duke Energy,Utilities,Electric Utilities
+EIX,Edison International,Utilities,Electric Utilities
+ETR,Entergy,Utilities,Electric Utilities
+EVRG,Evergy,Utilities,Electric Utilities
+FE,FirstEnergy,Utilities,Electric Utilities
+PPL,PPL Corporation,Utilities,Electric Utilities
+PEG,Public Service Enterprise Group,Utilities,Electric Utilities
+SO,Southern Company,Utilities,Electric Utilities
+WEC,WEC Energy Group,Utilities,Electric Utilities
+ATO,Atmos Energy,Utilities,Gas Utilities
+AES,AES Corporation,Utilities,Independent Power Producers & Energy Traders
+NRG,NRG Energy,Utilities,Independent Power Producers & Energy Traders
+AEE,Ameren,Utilities,Multi-Utilities
+CNP,CenterPoint Energy,Utilities,Multi-Utilities
+CMS,CMS Energy,Utilities,Multi-Utilities
+CEG,Constellation Energy,Utilities,Multi-Utilities
+DTE,DTE Energy,Utilities,Multi-Utilities
+ES,Eversource,Utilities,Multi-Utilities
+EXC,Exelon,Utilities,Multi-Utilities
+NEE,NextEra Energy,Utilities,Multi-Utilities
+NI,NiSource,Utilities,Multi-Utilities
+PCG,PG&E Corporation,Utilities,Multi-Utilities
+PNW,Pinnacle West,Utilities,Multi-Utilities
+SRE,Sempra Energy,Utilities,Multi-Utilities
+XEL,Xcel Energy,Utilities,Multi-Utilities
+AWK,American Water Works,Utilities,Water Utilities
