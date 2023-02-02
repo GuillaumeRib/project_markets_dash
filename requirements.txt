@@ -10,6 +10,7 @@ dash_bootstrap_templates
 
 # Finance
 yfinance
+pandas_datareader
 
 # Server
 gunicorn
