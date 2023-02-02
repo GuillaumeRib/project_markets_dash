@@ -63,7 +63,7 @@ def surface_3d(df):
     fig = go.Figure(data=[go.Surface(x=df.columns,
                                     y=df.index,
                                     z=df.values,
-                                    opacity=0.9,
+                                    opacity=0.95,
                                     connectgaps=True,
                                     colorscale='rdbu',
                                     showscale=True,
@@ -71,7 +71,7 @@ def surface_3d(df):
                                     )
                         ]
                 )
-    fig.update_xaxes(title=None)
+
     fig.update_layout(title='Yield Curve Historical Evolution',
                         title_font=dict(size = 20),
                         autosize=True,
@@ -107,8 +107,8 @@ def line_spread(df):
     data = df.copy()
     data['Spread'] = (df['10Y']-df['3M'])*100
 
-    fig = px.area(data,
-              x=df.index,
+    fig = px.area(data.reset_index(),
+              x='DATE',
               y='Spread',
               range_y=[-200,400]
 
