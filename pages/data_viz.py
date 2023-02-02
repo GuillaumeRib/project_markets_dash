@@ -33,6 +33,7 @@ def line_yield_curve(df):
                                 size=14,
         )
     )
+    fig.update_xaxes(title=None)
     fig.update_layout(title='Yield Curve Monthly Replay',
                   title_font=dict(size = 20),
                   autosize=True,
