@@ -15,6 +15,7 @@ from dash_bootstrap_templates import load_figure_template
 from pages import get_data
 from pages import data_viz
 
+df= get_data.get_rates()
 
 ####################################
 # INIT APP
@@ -61,8 +62,7 @@ app.layout = html.Div(
     [Input('button', 'n_clicks')]
 )
 def update_chart(n_clicks):
-    pass
-    #fig = dcc.Graph(id='graph',figure=data_viz.line_yield_curve(df))
+    fig = dcc.Graph(id='graph',figure=data_viz.line_yield_curve(df))
 #############################################################################
 
 ####################################

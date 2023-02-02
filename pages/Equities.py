@@ -15,7 +15,7 @@ from dash_bootstrap_templates import load_figure_template
 from pages import get_data
 from pages import data_viz
 
-dash.register_page(__name__, path='/') # HOME Page
+dash.register_page(__name__) # Second page
 
 ####################################
 # Load data & dfs
