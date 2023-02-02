@@ -26,7 +26,7 @@ df = get_data.get_rates()
 ####################################
 # Page layout
 ####################################
-as_of = html.Em(children=f'as at: {df.index[-1].year}-{df.index[-1].month}',
+as_of = html.Em(children=f'Data as of {df.index[-1].strftime("%b-%Y")}',
                 className=('text-center'))
 
 layout = dbc.Container([

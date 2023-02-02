@@ -32,7 +32,7 @@ sector_df, ind_df, sector_cum_perf = get_data.get_sector_perf(returns_df,df)
 ####################################
 # Page layout
 ####################################
-as_of = html.Em(children=f'as at: {returns_df.index[-1].year}-{returns_df.index[-1].month}',
+as_of = html.Em(children=f'Data as of {returns_df.index[-1].strftime("%b-%Y")}',
                 className=('text-center'))
 
 layout = dbc.Container([
