@@ -215,6 +215,8 @@ def scat_ind(df,period='1M'):
     ))
     fig.update_layout(margin=dict(l=20, r=20),
                       title=f'Industry EW returns - {period}',
+                      title_font=dict(size = 20),
+                      autosize=True,
                      height=800,
                      xaxis_title=None,
                      yaxis_title=None
@@ -240,9 +242,21 @@ def tree(df,period='1M'):
                      title=''
                  )
 
-    fig.update_layout(margin=dict(l=20, r=20),
+    fig.update_layout(margin=dict(l=20, r=20,),
                      height=600,
-                     title=f'S&P 500 breakdown | Sector & industry - {period}'
+                     title=f'S&P 500 breakdown | Sector & industry - {period}',
+                     title_font=dict(size = 20),
+                     autosize=True,
+                     annotations=[
+                            dict(
+                                text="Data Source: Yahoo Finance, Wikipedia, IVV ETF",
+                                x=0,
+                                y=-0.05,
+                                xref="paper",
+                                yref="paper",
+                                showarrow=False
+                            )
+                        ]
                      )
     return fig
 
@@ -256,12 +270,14 @@ def bar_sec(df):
     fig = px.bar(df,
                  x=df.index,
                  y=['YTD','3M','2022'],
-                 color_discrete_sequence=['darkgrey','grey','indianred'],
+                 color_discrete_sequence=['indianred','grey','darkgrey'],
                  barmode='group',
                 )
 
     fig.update_layout(margin=dict(l=20, r=20),
                       title=f'Sector EW returns',
+                      title_font=dict(size = 20),
+                      autosize=True,
                      height=600,
                      xaxis_title=None,
                      yaxis_title=None
@@ -296,6 +312,8 @@ def scat_stock(df):
     ))
     fig.update_layout(margin=dict(l=20, r=20),
                      height=600,
+                     title_font=dict(size = 20),
+                     autosize=True,
                     )
 
     fig.update_yaxes(tickformat='.0%')
@@ -317,6 +335,8 @@ def line_sector(sector_cum_perf_df):
 
     fig.update_layout(margin=dict(l=20, r=20),
                      height=600,
+                     title_font=dict(size = 20),
+                     autosize=True,
                      xaxis_title=None,
                      yaxis_title=None
                     )

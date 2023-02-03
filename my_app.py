@@ -22,7 +22,7 @@ from pages import data_viz
 ####################################
 dbc_css = ("https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates@V1.0.2/dbc.min.css")
 app = dash.Dash(__name__,
-                external_stylesheets=[dbc.themes.YETI, dbc_css],
+                external_stylesheets=[dbc.themes.LUX, dbc_css],
                 meta_tags=[{'name':'viewport',
                             'content':'width=device-width,initial-scale=1.0'}],
                 use_pages=True
@@ -34,7 +34,7 @@ server=app.server
 # SELECT TEMPLATE for the APP
 ####################################
 # loads the template and sets it as the default
-load_figure_template("yeti")
+load_figure_template("lux")
 
 
 ####################################
@@ -42,7 +42,8 @@ load_figure_template("yeti")
 ####################################
 
 title = html.H1(children="US Markets Dashboard",
-                className=('text-center mt-4'))
+                className=('text-center mt-4'),
+                style={'fontSize':36})
 
 app.layout = html.Div(children=[
         dbc.Row(title),

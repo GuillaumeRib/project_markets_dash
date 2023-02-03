@@ -32,6 +32,9 @@ sector_df, ind_df, sector_cum_perf = get_data.get_sector_perf(returns_df,df)
 ####################################
 # Page layout
 ####################################
+
+load_figure_template("lux")
+
 as_of = html.Em(children=f'Data as of {returns_df.index[-1].strftime("%b-%Y")}',
                 className=('text-center'))
 
