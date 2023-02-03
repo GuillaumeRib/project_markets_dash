@@ -121,6 +121,7 @@ def line_spread(df):
                   autosize=True,
                   #width=1200,
                   height=500,
+                  margin=dict(t=40),
                   annotations=[
                             dict(
                                 text="Data Source: FRED - Federal Reserve Economic Data",
@@ -135,12 +136,15 @@ def line_spread(df):
                  )
     return fig
 
-def heatmap(df):
+def heatmap2(df):
     '''
     imshow of yields per month per term in heatmap format
     '''
-    fig = px.imshow(df.T,
-                    color_continuous_scale='icefire')
+    data = df.T
+    z = data * -1 # for colorscale to be reversed
+    fig = px.imshow(z,
+                    color_continuous_scale='rdbu',
+                    )
 
     fig.update_xaxes(title=None)
 
@@ -149,6 +153,7 @@ def heatmap(df):
                   autosize=True,
                   #width=1200,
                   height=500,
+                  coloraxis_showscale=False,
                   annotations=[
                             dict(
                                 text="Data Source: FRED - Federal Reserve Economic Data",
@@ -159,35 +164,53 @@ def heatmap(df):
                                 showarrow=False
                             )
                         ]
-
                  )
 
+    fig.update_traces(hovertemplate='Date: %{x}<br>Maturity: %{y}<br>Value: %{z}',
+                      customdata=data)
+    return fig
+
+def heatmap(df):
+    '''
+    imshow of yields per month per term in heatmap format
+    '''
+    data = df.T
+    data=data.iloc[::-1] #to reverse order of rows in a df
+    print(data)
+    fig = go.Figure(data=[go.Heatmap(z=data.values,
+                                     x=data.columns,
+                                     y=data.index,
+
+                                     colorscale='rdbu',
+                                    showscale=True,
+                                    reversescale=True,
+                    )])
+
+    fig.update_xaxes(title=None)
+
+    fig.update_layout(title='Yield Curve Heatmap',
+                  title_font=dict(size = 20),
+                  autosize=True,
+                  #width=1200,
+                  height=500,
+                  coloraxis_showscale=False,
+                  margin=dict(t=38),
+                  annotations=[
+                            dict(
+                                text="Data Source: FRED - Federal Reserve Economic Data",
+                                x=0,
+                                y=-0.15,
+                                xref="paper",
+                                yref="paper",
+                                showarrow=False
+                            )
+                        ]
+                 )
     return fig
 
 ####################################
 ############ EQUITIES ##############
 ####################################
-
-def sun(df,period='1M'):
-    '''
-    Plot a sunburst of S&P Sector industry and stocks by Size=weight, Color=Perf
-    '''
-    color_cont=['red','white','green']
-    fig = px.sunburst(df,
-                      path= ['Sector', 'Sub-Industry','Security'], #key arg for plotly to create hierarchy based on tidy data
-                      values='Weight',
-                      color=period,
-                      color_continuous_scale=color_cont,
-                      color_continuous_midpoint=0,
-                      #range_color=[-0.5,0.5],
-                      #hover_name=period,
-                      hover_data={period:':.2%','Weight':':.2%'}
-                      )
-    fig.update_traces(marker=dict(size=8), selector=dict(mode='markers'))
-    fig.update_layout(margin=dict(l=20, r=20),
-                      title=f'S&P 500 Breakdown | sector & industry - {period}',
-                     height=600)
-    return fig
 
 def scat_ind(df,period='1M'):
     '''
@@ -325,23 +348,31 @@ def line_sector(sector_cum_perf_df):
     '''
     Plot cumulative performances of Sectors(EW) vs EW of Sectors
     '''
-    sectors = sector_cum_perf_df.columns
-    fig = px.line(sector_cum_perf_df,
-                     y=sectors,
+    data = sector_cum_perf_df.resample('B').mean()
+    print(data)
+
+    fig = px.line(data,
+                     y=data.columns,
+                     x=data.index,
                      color_discrete_sequence=px.colors.qualitative.Plotly,
                      title=f'Cumulative growth | Sector EW - YTD'
 
                 )
+
 
     fig.update_layout(margin=dict(l=20, r=20),
                      height=600,
                      title_font=dict(size = 20),
                      autosize=True,
                      xaxis_title=None,
-                     yaxis_title=None
+                     yaxis_title=None,
                     )
 
     fig.update_yaxes(tickformat='.2f')
-
+    fig.update_xaxes(
+    rangebreaks=[
+        dict(bounds=["sat", "mon"]), #hide weekends
+    ]
+)
 
     return fig

@@ -136,6 +136,7 @@ def get_sector_perf(returns_df,df,period='2022'):
     sector_cum_perf = (np.exp((sector_returns['2023']).cumsum()))*100
     sector_cum_perf.loc[pd.to_datetime('2022-12-31')]= 100
     sector_cum_perf = sector_cum_perf.sort_index()
+    sector_cum_perf
 
 
     sector_df = pd.DataFrame(np.exp((sector_returns['2023']).sum())-1,columns=['YTD'])

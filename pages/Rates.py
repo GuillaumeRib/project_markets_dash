@@ -21,7 +21,6 @@ dash.register_page(__name__,path='/',name='Treasuries') # Home Page
 # Load data & dfs
 ####################################
 df = get_data.get_rates()
-
 load_figure_template("lux")
 ####################################
 # Page layout
@@ -34,21 +33,21 @@ layout = dbc.Container([
 
     dbc.Row([
         dbc.Col(dcc.Graph(figure=data_viz.surface_3d(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6,class_name=('mt-10')),
+            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6,class_name=('mt-4')),
 
         dbc.Col(
             dcc.Graph(figure=data_viz.heatmap(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6
+            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6,class_name=('mt-4')
             )
         ]),
 
     dbc.Row([
         dbc.Col(
             dcc.Graph(id='graph',figure=data_viz.line_yield_curve(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6),
+            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6,class_name=('mt-4')),
         dbc.Col(
             dcc.Graph(figure=data_viz.line_spread(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6)
+            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6,class_name=('mt-4'))
     ]),
 
 
