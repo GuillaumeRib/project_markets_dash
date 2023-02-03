@@ -57,10 +57,9 @@ app.layout = html.Div(children=[
             dash.page_container,
             fullscreen=True,
             show_initially=True,
-            delay_hide=400,
-            color='secondary',
+            delay_hide=600,
             type='border',
-            spinner_style={"width": "2rem", "height": "2rem"})
+            spinner_style={"width": "3rem", "height": "3rem"})
 
         ])
 
