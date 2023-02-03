@@ -176,7 +176,7 @@ def heatmap(df):
     '''
     data = df.T
     data=data.iloc[::-1] #to reverse order of rows in a df
-    print(data)
+
     fig = go.Figure(data=[go.Heatmap(z=data.values,
                                      x=data.columns,
                                      y=data.index,
@@ -349,7 +349,6 @@ def line_sector(sector_cum_perf_df):
     Plot cumulative performances of Sectors(EW) vs EW of Sectors
     '''
     data = sector_cum_perf_df.resample('B').mean()
-    print(data)
 
     fig = px.line(data,
                      y=data.columns,
