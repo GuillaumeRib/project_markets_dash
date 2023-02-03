@@ -69,7 +69,6 @@ def surface_3d(df):
                                     colorscale='rdbu',
                                     showscale=True,
                                     reversescale=True,
-                                    hoverinfo='y',
                                     )
                         ]
                 )

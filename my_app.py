@@ -40,27 +40,28 @@ load_figure_template("yeti")
 ####################################
 # Main Page layout
 ####################################
-spinner = dbc.Spinner()
+
 title = html.H1(children="US Markets Dashboard",
                 className=('text-center mt-4'))
 
-app.layout = html.Div(
-    children=[
+app.layout = html.Div(children=[
         dbc.Row(title),
-        dbc.Row([html.Div(id='button',children=
-            [dbc.Button(page['name'],href=page['path'])
-            for page in dash.page_registry.values()
-            ],
-            className=('text-center mt-4 mb-4'),style={'fontSize':20})]),
+        dbc.Row([html.Div(id='button',
+                          children=[dbc.Button(page['name'],href=page['path'])
+                                    for page in dash.page_registry.values()
+                                ],
+                      className=('text-center mt-4 mb-4'),style={'fontSize':20})
+                 ]),
         # Content page
         dbc.Spinner(
             dash.page_container,
             fullscreen=True,
             show_initially=True,
+            delay_hide=400,
             color='secondary',
-            spinner_style={"width": "3rem", "height": "3rem"}
-            ),
-        #dash.page_container
+            type='border',
+            spinner_style={"width": "2rem", "height": "2rem"})
+
         ])
 
 ##### Callback not properly setup, but avoid bug with animated chart ... ####
