@@ -31,15 +31,16 @@ as_of = html.Em(children=f'Data as of {df.index[-1].strftime("%b-%Y")}',
 
 layout = dbc.Container([
     dbc.Row(as_of,class_name=('mb-4')),
+
     dbc.Row([
-        dbc.Col(
-            dcc.Graph(figure=data_viz.surface_3d(df)),
+        dbc.Col(dcc.Graph(figure=data_viz.surface_3d(df)),
             xs=12,sm=12,md=12,lg=12,xl=12,xxl=6,class_name=('mt-10')),
 
         dbc.Col(
             dcc.Graph(figure=data_viz.heatmap(df)),
-            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6)
-    ]),
+            xs=12,sm=12,md=12,lg=12,xl=12,xxl=6
+            )
+        ]),
 
     dbc.Row([
         dbc.Col(
