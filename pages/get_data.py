@@ -63,6 +63,7 @@ def load_IVV_weight():
     '''
     Load weights from IVV Holdings csv => df_IVV
     link to IVV page:
+
     '''
     df_IVV = pd.read_csv('pages/IVV_holdings.csv',skiprows=8,header=1)
     df_IVV = df_IVV[df_IVV['Asset Class']=='Equity']
@@ -99,6 +100,15 @@ def get_returns():
     # fwd fill last prices to missing daily prices (non-trading)
     daily_prices_csv = prices_csv.asfreq('D').ffill()
     returns_df = np.log(daily_prices_csv / daily_prices_csv.shift(1))
+    ## EDIT
+    last_date = returns_df.index[-1]
+    print(last_date)
+
+    #last_month_end = pd.date_range(last_date, periods=1, freq='M').strftime('%Y-%m-%d')[0]
+    last_month_end = last_date - pd.offsets.MonthEnd(1)
+    print(last_month_end)
+    returns_df = returns_df[returns_df.index <= last_month_end]
+    print(returns_df.index[-1])
     return returns_df
 
 

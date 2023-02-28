@@ -22,10 +22,12 @@ dash.register_page(__name__,path='/',name='Treasuries') # Home Page
 ####################################
 df = get_data.get_rates()
 load_figure_template("lux")
+rates_update_time = df.index[-1].strftime("%b-%Y")
+
 ####################################
 # Page layout
 ####################################
-as_of = html.Em(children=f'Data as of {df.index[-1].strftime("%b-%Y")}',
+as_of = html.Em(children=f'Data as of {rates_update_time}',
                 className=('text-center'))
 
 layout = dbc.Container([
