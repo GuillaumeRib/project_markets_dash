@@ -1,7 +1,6 @@
 ####################################
 # IMPORTS
 ####################################
-
 import pandas as pd
 import datetime
 
@@ -14,8 +13,6 @@ from dash_bootstrap_templates import load_figure_template
 
 from pages import get_data
 from pages import data_viz
-
-#df= get_data.get_rates()
 
 ####################################
 # INIT APP
@@ -64,13 +61,6 @@ app.layout = html.Div(children=[
 
         ])
 
-##### Callback not properly setup, but avoid bug with animated chart ... ####
-# @app.callback(
-#     Output('graph', 'figure'),
-#     [Input('button', 'n_clicks')]
-# )
-# def update_chart(n_clicks):
-#     fig = dcc.Graph(id='graph',figure=data_viz.line_yield_curve(df))
 #############################################################################
 
 ####################################

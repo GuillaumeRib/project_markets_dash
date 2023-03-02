@@ -16,6 +16,8 @@ def get_rates():
     df = pdr.get_data_fred(tickers,start)
     df.columns=['30Y','10Y','5Y','3Y','2Y','1Y','6M','3M']
     df.dropna(inplace=True)
+    # Changing format from 1st day of the month to last day of the month
+    df.index = df.index + pd.offsets.MonthEnd(0)
     return df
 
 
@@ -37,7 +39,7 @@ def get_spx_cons(csv_path):
     URL = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
     df = pd.read_html(URL)[0]
     df['Symbol'] = df['Symbol'].str.replace('.','-')
-    df = df.drop(['SEC filings','Headquarters Location','Date added','CIK','Founded'],axis=1)
+    df = df.drop(['Headquarters Location','Date added','CIK','Founded'],axis=1)
     df = df.sort_values(by=['GICS Sector','GICS Sub-Industry'])
     df = df.set_index('Symbol')
     df.dropna(inplace=True)
@@ -63,6 +65,7 @@ def load_IVV_weight():
     '''
     Load weights from IVV Holdings csv => df_IVV
     link to IVV page:
+
     '''
     df_IVV = pd.read_csv('pages/IVV_holdings.csv',skiprows=8,header=1)
     df_IVV = df_IVV[df_IVV['Asset Class']=='Equity']
@@ -99,6 +102,15 @@ def get_returns():
     # fwd fill last prices to missing daily prices (non-trading)
     daily_prices_csv = prices_csv.asfreq('D').ffill()
     returns_df = np.log(daily_prices_csv / daily_prices_csv.shift(1))
+    ## EDIT
+    last_date = returns_df.index[-1]
+    print(last_date)
+
+    #last_month_end = pd.date_range(last_date, periods=1, freq='M').strftime('%Y-%m-%d')[0]
+    last_month_end = last_date - pd.offsets.MonthEnd(1)
+    print(last_month_end)
+    returns_df = returns_df[returns_df.index <= last_month_end]
+    print(returns_df.index[-1])
     return returns_df
 
 
