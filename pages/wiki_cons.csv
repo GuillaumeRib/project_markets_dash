@@ -1,5 +1,5 @@
 Symbol,Security,GICS Sector,GICS Sub-Industry
-IPG,The Interpublic Group of Companies,Communication Services,Advertising
+IPG,Interpublic Group of Companies (The),Communication Services,Advertising
 OMC,Omnicom Group,Communication Services,Advertising
 LUMN,Lumen Technologies,Communication Services,Alternative Carriers
 WBD,Warner Bros. Discovery,Communication Services,Broadcasting
@@ -103,11 +103,11 @@ KHC,Kraft Heinz,Consumer Staples,Packaged Foods & Meats
 LW,Lamb Weston,Consumer Staples,Packaged Foods & Meats
 MKC,McCormick & Company,Consumer Staples,Packaged Foods & Meats
 MDLZ,Mondelez International,Consumer Staples,Packaged Foods & Meats
-SJM,The J.M. Smucker Company,Consumer Staples,Packaged Foods & Meats
+SJM,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
 TSN,Tyson Foods,Consumer Staples,Packaged Foods & Meats
-EL,The Estée Lauder Companies,Consumer Staples,Personal Products
+EL,Estée Lauder Companies (The),Consumer Staples,Personal Products
 PG,Procter & Gamble,Consumer Staples,Personal Products
-KO,The Coca-Cola Company,Consumer Staples,Soft Drinks
+KO,Coca-Cola Company (The),Consumer Staples,Soft Drinks
 KDP,Keurig Dr Pepper,Consumer Staples,Soft Drinks
 MNST,Monster Beverage,Consumer Staples,Soft Drinks
 PEP,PepsiCo,Consumer Staples,Soft Drinks
@@ -188,7 +188,7 @@ CB,Chubb Limited,Financials,Property & Casualty Insurance
 CINF,Cincinnati Financial,Financials,Property & Casualty Insurance
 HIG,Hartford (The),Financials,Property & Casualty Insurance
 PGR,Progressive Corporation,Financials,Property & Casualty Insurance
-TRV,The Travelers Companies,Financials,Property & Casualty Insurance
+TRV,Travelers Companies (The),Financials,Property & Casualty Insurance
 CFG,Citizens Financial Group,Financials,Regional Banks
 FITB,Fifth Third Bank,Financials,Regional Banks
 FRC,First Republic Bank,Financials,Regional Banks
@@ -421,7 +421,7 @@ EMN,Eastman Chemical Company,Materials,Diversified Chemicals
 CF,CF Industries,Materials,Fertilizers & Agricultural Chemicals
 CTVA,Corteva,Materials,Fertilizers & Agricultural Chemicals
 FMC,FMC Corporation,Materials,Fertilizers & Agricultural Chemicals
-MOS,The Mosaic Company,Materials,Fertilizers & Agricultural Chemicals
+MOS,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals
 NEM,Newmont,Materials,Gold
 APD,Air Products and Chemicals,Materials,Industrial Gases
 LIN,Linde plc,Materials,Industrial Gases

@@ -39,7 +39,7 @@ def get_spx_cons(csv_path):
     URL = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
     df = pd.read_html(URL)[0]
     df['Symbol'] = df['Symbol'].str.replace('.','-')
-    df = df.drop(['SEC filings','Headquarters Location','Date added','CIK','Founded'],axis=1)
+    df = df.drop(['Headquarters Location','Date added','CIK','Founded'],axis=1)
     df = df.sort_values(by=['GICS Sector','GICS Sub-Industry'])
     df = df.set_index('Symbol')
     df.dropna(inplace=True)
