@@ -16,6 +16,8 @@ def get_rates():
     df = pdr.get_data_fred(tickers,start)
     df.columns=['30Y','10Y','5Y','3Y','2Y','1Y','6M','3M']
     df.dropna(inplace=True)
+    # Changing format from 1st day of the month to last day of the month
+    df.index = df.index + pd.offsets.MonthEnd(0)
     return df
 
 

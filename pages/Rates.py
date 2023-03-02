@@ -23,6 +23,7 @@ dash.register_page(__name__,path='/',name='Treasuries') # Home Page
 df = get_data.get_rates()
 load_figure_template("lux")
 rates_update_time = df.index[-1].strftime("%b-%Y")
+#rates_update_time = df.index[-1].strftime("%b-%Y")
 
 ####################################
 # Page layout

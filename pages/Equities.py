@@ -42,6 +42,8 @@ if equities_update_time != rates_update_time:
 stock_df = get_data.get_stock_perf(returns_df,df)
 sector_df, ind_df, sector_cum_perf = get_data.get_sector_perf(returns_df,df)
 
+# new update time
+equities_update_time = returns_df.index[-1].strftime("%b-%Y")
 
 ####################################
 # Page layout
