@@ -31,20 +31,6 @@ returns_df = get_data.get_returns()
 # checking latest update Equities
 equities_update_time = returns_df.index[-1].strftime("%b-%Y")
 
-# If latest update Equities different from Rates: dwnl from yfinance new prices and re rerun get_data returns
-# if equities_update_time != rates_update_time:
-#     print('Collecting new stock prices ...')
-#     df = get_data.load_wiki_cons('pages/wiki_cons.csv')
-#     get_data.get_prices(df)
-
-#     # waiting a bit the time the new prices csv is sync with drive
-#     print('Waiting for the file to sync with drive ...')
-#     time.sleep(5)
-
-#     weights = get_data.load_IVV_weight()
-#     df = get_data.join_dfs(df,weights)
-#     returns_df = get_data.get_returns()
-
 stock_df = get_data.get_stock_perf(returns_df,df)
 sector_df, ind_df, sector_cum_perf = get_data.get_sector_perf(returns_df,df)
 

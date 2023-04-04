@@ -53,7 +53,7 @@ def get_prices(df):
     # local_path linked to drive via sinology
     local_path = '/Users/chloeguillaume/SynologyDrive/Google Drive/DATA_PUBLIC/us_markets_dash_data/spx.csv'
     # url public on google drive
-    file_id = '1uLNd8hlftwtgjqoH92yPe-7ZK7G7kNU1'
+    file_id = '1SoheVoh79lEo5HhVxR_p_XdLewRAgWdh'
     url_open = f'https://drive.google.com/uc?id={file_id}&export=download'
     url_save = f'https://drive.google.com/u/0/uc?id={file_id}&export=download'
 
@@ -78,10 +78,6 @@ def load_IVV_weight():
     link to IVV page:
 
     '''
-    # google_drive url
-    file_id = '1SOIoKge14QXNs5vYFn8_l1K8oBPd2wcG'
-    url = f'https://drive.google.com/uc?id={file_id}&export=download'
-    #local file path
     local_path = 'pages/IVV_holdings.csv'
 
     df_IVV = pd.read_csv(local_path,skiprows=8,header=1)
