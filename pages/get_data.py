@@ -114,7 +114,7 @@ def get_returns():
     output returns_df
     '''
     # google_drive url
-    file_id = '1uLNd8hlftwtgjqoH92yPe-7ZK7G7kNU1'
+    file_id = '1SoheVoh79lEo5HhVxR_p_XdLewRAgWdh'
     url = f'https://drive.google.com/uc?id={file_id}&export=download'
     #local file path
     local_path = 'pages/spx.csv'
