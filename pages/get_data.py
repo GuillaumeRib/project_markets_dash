@@ -46,14 +46,25 @@ def get_spx_cons(csv_path):
     return df.to_csv(csv_path)
 
 # GETTING S&P prices from yfinance - Save to csv
-def get_prices(df,csv_path):
+def get_prices(df):
     '''
     Dowload prices from yfinance from a list of tickers. returns df of prices written to a csv
     '''
+    # local_path linked to drive via sinology
+    local_path = '/Users/chloeguillaume/SynologyDrive/Google Drive/DATA_PUBLIC/us_markets_dash_data/spx.csv'
+    # url public on google drive
+    file_id = '1uLNd8hlftwtgjqoH92yPe-7ZK7G7kNU1'
+    url_open = f'https://drive.google.com/uc?id={file_id}&export=download'
+    url_save = f'https://drive.google.com/u/0/uc?id={file_id}&export=download'
+
+    #file = pd.read_csv(local_path)
+
     tickers_list = df.index.tolist()
-    start= '2010-12-31'
+    start= '2020-12-31'
     prices_df = yf.download(tickers_list, start=start,interval='1d',)
-    return prices_df['Adj Close'].to_csv(csv_path)
+    file = prices_df['Adj Close']
+
+    return file.to_csv(local_path)
 
 
 ####################################
@@ -67,7 +78,13 @@ def load_IVV_weight():
     link to IVV page:
 
     '''
-    df_IVV = pd.read_csv('pages/IVV_holdings.csv',skiprows=8,header=1)
+    # google_drive url
+    file_id = '1SOIoKge14QXNs5vYFn8_l1K8oBPd2wcG'
+    url = f'https://drive.google.com/uc?id={file_id}&export=download'
+    #local file path
+    local_path = 'pages/IVV_holdings.csv'
+
+    df_IVV = pd.read_csv(local_path,skiprows=8,header=1)
     df_IVV = df_IVV[df_IVV['Asset Class']=='Equity']
     df_IVV = df_IVV[['Ticker','Name','Sector','Asset Class','Weight (%)']]
     df_IVV = df_IVV.set_index('Ticker')
@@ -96,8 +113,13 @@ def get_returns():
     Load prices from csv and compute daily stock returns.
     output returns_df
     '''
-    file = 'pages/spx.csv'
-    prices_csv = pd.read_csv(file).set_index('Date')
+    # google_drive url
+    file_id = '1uLNd8hlftwtgjqoH92yPe-7ZK7G7kNU1'
+    url = f'https://drive.google.com/uc?id={file_id}&export=download'
+    #local file path
+    local_path = 'pages/spx.csv'
+
+    prices_csv = pd.read_csv(url).set_index('Date')
     prices_csv.index = pd.to_datetime(prices_csv.index)
     # fwd fill last prices to missing daily prices (non-trading)
     daily_prices_csv = prices_csv.asfreq('D').ffill()
