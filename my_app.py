@@ -22,7 +22,7 @@ app = dash.Dash(__name__,
                 external_stylesheets=[dbc.themes.LUX, dbc_css],
                 meta_tags=[{'name':'viewport',
                             'content':'width=device-width,initial-scale=1.0'}],
-                use_pages=True
+                use_pages=True,
                 )
 server=app.server
 
@@ -42,15 +42,18 @@ title = html.H1(children="US Markets Dashboard",
                 className=('text-center mt-4'),
                 style={'fontSize':36})
 
-app.layout = html.Div(children=[
+
+def layout():
+
+    return html.Div(children=[
         dbc.Row(title),
         dbc.Row([html.Div(id='button',
-                          children=[dbc.Button(page['name'],href=page['path'])
-                                    for page in dash.page_registry.values()
-                                ],
+                      children=[dbc.Button(page['name'],href=page['path'])
+                                for page in dash.page_registry.values()
+                        ],
                       className=('text-center mt-4 mb-4'),style={'fontSize':20})
-                 ]),
-        # Content page
+             ]),
+    # Content page
         dbc.Spinner(
             dash.page_container,
             fullscreen=True,
@@ -58,8 +61,10 @@ app.layout = html.Div(children=[
             delay_hide=600,
             type='border',
             spinner_style={"width": "3rem", "height": "3rem"})
-
         ])
+
+app.layout = layout
+
 
 #############################################################################
 

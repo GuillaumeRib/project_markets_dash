@@ -191,7 +191,6 @@ PGR,Progressive Corporation,Financials,Property & Casualty Insurance
 TRV,Travelers Companies (The),Financials,Property & Casualty Insurance
 CFG,Citizens Financial Group,Financials,Regional Banks
 FITB,Fifth Third Bank,Financials,Regional Banks
-FRC,First Republic Bank,Financials,Regional Banks
 HBAN,Huntington Bancshares,Financials,Regional Banks
 KEY,KeyCorp,Financials,Regional Banks
 MTB,M&T Bank,Financials,Regional Banks
@@ -274,6 +273,7 @@ OGN,Organon & Co.,Health Care,Pharmaceuticals
 PFE,Pfizer,Health Care,Pharmaceuticals
 VTRS,Viatris,Health Care,Pharmaceuticals
 ZTS,Zoetis,Health Care,Pharmaceuticals
+AXON,Axon Enterprise,Industrials,Aerospace & Defense
 BA,Boeing,Industrials,Aerospace & Defense
 GD,General Dynamics,Industrials,Aerospace & Defense
 HWM,Howmet Aerospace,Industrials,Aerospace & Defense

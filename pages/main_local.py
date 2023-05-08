@@ -15,5 +15,5 @@ if __name__ == '__main__':
     get_data.get_spx_cons('wiki_cons.csv')
 
     # To Update latest prices
-    #df = get_data.load_wiki_cons('wiki_cons.csv')
-    #get_data.get_prices(df)
+    df = get_data.load_wiki_cons('wiki_cons.csv')
+    get_data.get_prices(df)

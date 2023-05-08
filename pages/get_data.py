@@ -18,6 +18,7 @@ def get_rates():
     df.dropna(inplace=True)
     # Changing format from 1st day of the month to last day of the month
     df.index = df.index + pd.offsets.MonthEnd(0)
+    print(df)
     return df
 
 
