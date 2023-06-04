@@ -226,10 +226,10 @@ def scat_ind(df,period='1M'):
                     x='Sub-Industry',
                     y=period,
                     color='Sector',
-                    size = 'Count',
+                    size = 'Weight',
                     hover_name='Sub-Industry',
                     color_discrete_sequence=px.colors.qualitative.Plotly,
-                    hover_data={period:':.2%', 'Count':':.0f' }
+                    hover_data={period:':.2%', 'Weight':':.2%' }
                 )
     fig.update_traces(marker=dict(
         line=dict(
@@ -253,6 +253,7 @@ def tree(df,period='1M'):
     '''
 
     '''
+    max_perf = df[period].max()
     color_cont=['red','white','green']
     fig = px.treemap(df,
                      path= ['Sector','Sub-Industry','Security'], #key arg for plotly to create hierarchy based on tidy data
@@ -260,7 +261,8 @@ def tree(df,period='1M'):
                      color=period,
                      color_continuous_scale=color_cont,
                      color_continuous_midpoint=0,
-                     #range_color=[-0.5,0.5],
+
+                     range_color=[-1.0,1],
                      hover_data={period:':.2%','Weight':':.2%'},
                      title=''
                  )
@@ -315,17 +317,19 @@ def scat_stock(df):
 
     '''
     fig = px.scatter(df,
-                     x='2022',
-                     y='YTD',
+                     x='YTD',
+                     y='1M',
                      color='Sector',
                      size='Weight',
                      hover_name='Security',
                      size_max=40,
                      color_discrete_sequence=px.colors.qualitative.Plotly,
-                     hover_data={'2022':':.2%',
-                                 'YTD':':.2%',
-                                 'Weight':':2%'},
-                     title=f'Stock returns - YTD vs 2022'
+                     hover_data={
+                         'Sub-Industry':True,
+                         'YTD':':.2%',
+                         '1M':':.2%',
+                         'Weight':':2%'},
+                     title=f'Stock returns - 1M vs YTD'
 
                 )
     fig.update_traces(marker=dict(
@@ -348,7 +352,7 @@ def line_sector(sector_cum_perf_df):
     '''
     Plot cumulative performances of Sectors(EW) vs EW of Sectors
     '''
-    data = sector_cum_perf_df.resample('B').mean()
+    data = sector_cum_perf_df.resample('W').mean()
 
     fig = px.line(data,
                      y=data.columns,
@@ -368,10 +372,8 @@ def line_sector(sector_cum_perf_df):
                     )
 
     fig.update_yaxes(tickformat='.2f')
-    fig.update_xaxes(
-    rangebreaks=[
-        dict(bounds=["sat", "mon"]), #hide weekends
-    ]
-)
-
+    #fig.update_xaxes(
+    #   rangebreaks=[dict(bounds=["sat","mon"]), #hide weekends - not rendering properly right now
+    #    ]
+    #)
     return fig

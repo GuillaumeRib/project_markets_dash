@@ -18,7 +18,7 @@ def get_rates():
     df.dropna(inplace=True)
     # Changing format from 1st day of the month to last day of the month
     df.index = df.index + pd.offsets.MonthEnd(0)
-    print(df)
+    print(f'rates as at: {df.index[-1]}')
     return df
 
 
@@ -53,6 +53,7 @@ def get_prices(df):
     '''
     # local_path linked to drive via sinology
     local_path = '/Users/chloeguillaume/SynologyDrive/Google Drive/DATA_PUBLIC/us_markets_dash_data/spx.csv'
+
     # url public on google drive
     file_id = '1SoheVoh79lEo5HhVxR_p_XdLewRAgWdh'
     url_open = f'https://drive.google.com/uc?id={file_id}&export=download'
@@ -65,7 +66,7 @@ def get_prices(df):
     prices_df = yf.download(tickers_list, start=start,interval='1d',)
     file = prices_df['Adj Close']
 
-    return file.to_csv(local_path)
+    return file.to_csv('spx.csv')
 
 
 ####################################
@@ -110,14 +111,13 @@ def get_returns():
     Load prices from csv and compute daily stock returns.
     output returns_df
     '''
-    # google_drive url
-    file_id = '1SoheVoh79lEo5HhVxR_p_XdLewRAgWdh'
-    url = f'https://drive.google.com/uc?id={file_id}&export=download'
-    #local file path
+
     local_path = 'pages/spx.csv'
 
-    prices_csv = pd.read_csv(url).set_index('Date')
+    prices_csv = pd.read_csv(local_path).set_index('Date')
     prices_csv.index = pd.to_datetime(prices_csv.index)
+    print(prices_csv.index[-1])
+
     # fwd fill last prices to missing daily prices (non-trading)
     daily_prices_csv = prices_csv.asfreq('D').ffill()
     returns_df = np.log(daily_prices_csv / daily_prices_csv.shift(1))
@@ -125,11 +125,11 @@ def get_returns():
     last_date = returns_df.index[-1]
     print(last_date)
 
-    #last_month_end = pd.date_range(last_date, periods=1, freq='M').strftime('%Y-%m-%d')[0]
+    last_month_end = pd.date_range(last_date, periods=1, freq='M').strftime('%Y-%m-%d')[0]
     last_month_end = last_date - pd.offsets.MonthEnd(1)
     print(last_month_end)
     returns_df = returns_df[returns_df.index <= last_month_end]
-    print(returns_df.index[-1])
+
     return returns_df
 
 
@@ -189,4 +189,5 @@ def join_dfs(df,df_IVV):
     df.sort_values(by='Weight (%)',inplace=True,ascending=False)
     df = df.rename(columns={'GICS Sector':'Sector','GICS Sub-Industry':'Sub-Industry','Weight (%)':'Weight'})
     df.dropna(inplace=True)
+    df = df[df['Weight'] != 0] #to remove any possible 0% weight stock
     return df

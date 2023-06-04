@@ -70,7 +70,7 @@ layout = dbc.Container([
             dcc.Graph(figure=data_viz.scat_stock(stock_df)),
             xs=12,sm=12,md=12,lg=12,xl=12,xxl=12,class_name=('mt-4')),
         dbc.Col(
-            dcc.Graph(figure=data_viz.scat_ind(stock_df,'YTD')),
+            dcc.Graph(figure=data_viz.scat_ind(stock_df,'1M')),
             xs=12,sm=12,md=12,lg=12,xl=12,xxl=12,class_name=('mt-4')),
     ]),
 
