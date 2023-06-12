@@ -3,6 +3,9 @@ import numpy as np
 import pandas_datareader as pdr
 import yfinance as yf
 
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
 ####################################
 ############## RATES ###############
 ####################################
@@ -132,6 +135,31 @@ def get_returns():
 
     return returns_df
 
+# Computing resampled returns
+def get_spx_returns(local_path = 'pages/spx.csv',freq='W'):
+    '''
+    Input daily prices df of prices. Use freq as 'D','B', 'W', or 'M' for daily, business, weekly, or monthly.
+    Output returns_df in selected frequency
+    '''
+    prices_df = pd.read_csv(local_path).set_index('Date')
+    prices_df.index = pd.to_datetime(prices_df.index)
+    # fwd fill last prices to missing daily prices (non-trading)
+    prices_df = prices_df.asfreq('D').ffill()
+
+    prices_d = prices_df.dropna(axis=0,how='all')
+    prices_d = prices_d.dropna(axis=1)
+    prices_res = prices_d.resample(freq).last()
+    prices_res = prices_res.dropna(axis=1)
+    returns = prices_res.pct_change().dropna()
+
+    ## Set to month end
+    last_date = returns.index[-1]
+    last_month_end = pd.date_range(last_date, periods=1, freq='M').strftime('%Y-%m-%d')[0]
+    last_month_end = last_date - pd.offsets.MonthEnd(1)
+    returns = returns[returns.index <= last_month_end]
+
+    return returns
+
 
 # Computing stock 1M, 3M, and YTD performance
 def get_stock_perf(returns_df,df):
@@ -191,3 +219,67 @@ def join_dfs(df,df_IVV):
     df.dropna(inplace=True)
     df = df[df['Weight'] != 0] #to remove any possible 0% weight stock
     return df
+
+##########################
+###      ML Models     ###
+##########################
+
+### RUN PCA ###
+def train_PCA(X, n_comp=3):
+    """
+    From returns df X, compute n_comp PCA and returns W,pca,X_proj,cum_var
+    """
+    # Set X
+
+    # Standardize returns into X_scal
+    scaler = StandardScaler()
+    scaler.fit(X)
+    X_scal = pd.DataFrame(scaler.transform(X), columns=X.columns, index=X.index)
+    # Run PCA
+    pca = PCA(n_comp)
+    pca.fit(X_scal)
+    # Get PCA loadings
+    W = pca.components_
+    W = pd.DataFrame(W.T,
+                     index=X.columns,
+                     columns=pca.get_feature_names_out())
+    # Print cum explained variance by n_comp components
+    cum_var = np.cumsum(pca.explained_variance_ratio_)
+    print(f'Total explained variance:{np.round(cum_var.max(),2)} with {n_comp} PCs')
+
+    X_proj = pca.transform(X_scal)
+    X_proj = pd.DataFrame(X_proj, columns=pca.get_feature_names_out(),index=X_scal.index)
+
+    return W,pca,X_proj,cum_var
+
+
+def get_kmean_clusters(X,k=11):
+    """
+    From X matrix of returns,
+    train K-Means to cluster stocks in k clusters.
+    Returns clusters labels assigned to each stock in a df
+    """
+    from sklearn.cluster import KMeans
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(X.T)
+    labels = kmeans.labels_
+    # Assign stocks to clusters
+    clusters_k = pd.DataFrame(labels,index=X.columns,columns=['cluster'])
+    clusters_k = clusters_k.sort_values(by='cluster')
+    return clusters_k
+
+
+def get_pcakmean_clusters(W,k=11):
+    """
+    From W matrix of PCA loadings for each stock,
+    train K-Means to cluster stocks in k clusters.
+    Returns clusters labels assigned to each stock in a df
+    """
+    from sklearn.cluster import KMeans
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(W)
+    labels = kmeans.labels_
+    # Assign stocks to clusters
+    clusters_k = pd.DataFrame(labels,index=W.index,columns=['cluster'])
+    clusters_k = clusters_k.sort_values(by='cluster')
+    return clusters_k

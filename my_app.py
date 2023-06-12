@@ -11,6 +11,8 @@ from dash.dependencies import Input,Output
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 
+
+
 from pages import get_data
 from pages import data_viz
 
@@ -24,7 +26,7 @@ app = dash.Dash(__name__,
                             'content':'width=device-width,initial-scale=1.0'}],
                 use_pages=True,
                 )
-server=app.server
+#server=app.server
 
 
 ####################################
@@ -32,7 +34,6 @@ server=app.server
 ####################################
 # loads the template and sets it as the default
 load_figure_template("lux")
-
 
 ####################################
 # Main Page layout
@@ -48,7 +49,11 @@ def layout():
     return html.Div(children=[
         dbc.Row(title),
         dbc.Row([html.Div(id='button',
-                      children=[dbc.Button(page['name'],href=page['path'])
+                      children=[dbc.Button(page['name'],
+                                           href=page['path'],
+                                           outline=True,
+                                           color='dark',
+                                           className="me-1")
                                 for page in dash.page_registry.values()
                         ],
                       className=('text-center mt-4 mb-4'),style={'fontSize':20})
@@ -64,6 +69,7 @@ def layout():
         ])
 
 app.layout = layout
+
 
 ### GOOGLE ANALYTICS TAG ###
 app.index_string = '''
@@ -105,5 +111,5 @@ app.index_string = '''
 # RUN the app
 ####################################
 if __name__ == '__main__':
-    server=app.server
+    #server=app.server
     app.run_server(debug=True)
