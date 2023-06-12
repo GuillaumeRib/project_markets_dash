@@ -29,11 +29,12 @@ df = get_data.load_wiki_cons('pages/wiki_cons.csv')
 
 weights = get_data.load_IVV_weight()
 df = get_data.join_dfs(df,weights)
-X = get_data.get_spx_returns(freq='B')
-X = X.tail(252)
+X = get_data.get_spx_returns(freq='D')
+print(X.shape[0])
+X = X.tail(252*2)
 print(X.index[-1])
 
-def update_graph(value1=10, value2=25):
+def update_graph(value1=10, value2=11):
     W,pca,X_proj,cum_var = get_data.train_PCA(X,n_comp=value1)
     clusters = get_data.get_pcakmean_clusters(W,k=value2)
     cum_var_max = "{:.2f}".format(cum_var.max()*100)
@@ -112,7 +113,7 @@ layout = dbc.Container([
             style={'fontSize':16}
             )
         ),
-    dbc.Row(html.P(children="Period: 1Y / Frequency: daily returns ",
+    dbc.Row(html.P(children="Based on daily total returns over the past 2Yrs",
                 style={'fontSize':12})),
 
     dbc.Row([
