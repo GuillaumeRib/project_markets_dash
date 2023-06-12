@@ -6,6 +6,7 @@ import yfinance as yf
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 
+print(sklearn.__version__)
 ####################################
 ############## RATES ###############
 ####################################
