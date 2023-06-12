@@ -12,6 +12,9 @@ dash_bootstrap_templates
 yfinance
 pandas_datareader
 
+#ML
+scikit-learn
+
 # Server
 gunicorn
 
