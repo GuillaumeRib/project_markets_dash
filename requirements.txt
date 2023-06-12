@@ -13,7 +13,7 @@ yfinance
 pandas_datareader
 
 #ML
-scikit-learn==1.1.2
+scikit-learn>=1.0.0
 
 # Server
 gunicorn
