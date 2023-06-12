@@ -26,7 +26,7 @@ app = dash.Dash(__name__,
                             'content':'width=device-width,initial-scale=1.0'}],
                 use_pages=True,
                 )
-#server=app.server
+server=app.server
 
 
 ####################################
@@ -111,5 +111,5 @@ app.index_string = '''
 # RUN the app
 ####################################
 if __name__ == '__main__':
-    #server=app.server
+    server=app.server
     app.run_server(debug=True)
