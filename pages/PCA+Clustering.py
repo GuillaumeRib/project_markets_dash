@@ -119,7 +119,7 @@ def update_graph(value1, value2):
              )
     fig1.update_layout(xaxis_title='PCs', yaxis_title='Cum Var', showlegend=False)
 
-    fig2 = px.scatter_3d(W_clust, x='pca0', y='pca1', z='pca2',
+    fig2 = px.scatter_3d(W_clust, x='PC1', y='PC2', z='PC3',
                     height=700,
                     color='cluster',
                     hover_data=[W_clust.index,W_clust.Security,W_clust.cluster],

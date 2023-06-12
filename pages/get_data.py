@@ -242,13 +242,13 @@ def train_PCA(X, n_comp=3):
     W = pca.components_
     W = pd.DataFrame(W.T,
                      index=X.columns,
-                     columns=pca.get_feature_names_out())
+                     columns=[f'PC{n+1}' for n in range(n_comp)])
     # Print cum explained variance by n_comp components
     cum_var = np.cumsum(pca.explained_variance_ratio_)
     print(f'Total explained variance:{np.round(cum_var.max(),2)} with {n_comp} PCs')
 
     X_proj = pca.transform(X_scal)
-    X_proj = pd.DataFrame(X_proj, columns=pca.get_feature_names_out(),index=X_scal.index)
+    X_proj = pd.DataFrame(X_proj, columns=[f'PC{n+1}' for n in range(n_comp)],index=X_scal.index)
 
     return W,pca,X_proj,cum_var
 
