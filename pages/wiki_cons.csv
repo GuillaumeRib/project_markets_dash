@@ -4,7 +4,6 @@ OMC,Omnicom Group,Communication Services,Advertising
 WBD,Warner Bros. Discovery,Communication Services,Broadcasting
 CHTR,Charter Communications,Communication Services,Cable & Satellite
 CMCSA,Comcast,Communication Services,Cable & Satellite
-DISH,Dish Network,Communication Services,Cable & Satellite
 T,AT&T,Communication Services,Integrated Telecommunication Services
 VZ,Verizon,Communication Services,Integrated Telecommunication Services
 ATVI,Activision Blizzard,Communication Services,Interactive Home Entertainment
@@ -36,6 +35,9 @@ APTV,Aptiv,Consumer Discretionary,Automotive Parts & Equipment
 BWA,BorgWarner,Consumer Discretionary,Automotive Parts & Equipment
 AAP,Advance Auto Parts,Consumer Discretionary,Automotive Retail
 KMX,CarMax,Consumer Discretionary,Automotive Retail
+AMZN,Amazon,Consumer Discretionary,Broadline Retail
+EBAY,eBay,Consumer Discretionary,Broadline Retail
+ETSY,Etsy,Consumer Discretionary,Broadline Retail
 CZR,Caesars Entertainment,Consumer Discretionary,Casinos & Gaming
 LVS,Las Vegas Sands,Consumer Discretionary,Casinos & Gaming
 MGM,MGM Resorts,Consumer Discretionary,Casinos & Gaming
@@ -56,13 +58,10 @@ HLT,Hilton Worldwide,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 MAR,Marriott International,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 RCL,Royal Caribbean Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+BKNG,Booking Holdings,Consumer Discretionary,"Hotels, Restaurants & Leisure"
+EXPE,Expedia Group,Consumer Discretionary,"Hotels, Restaurants & Leisure"
 WHR,Whirlpool Corporation,Consumer Discretionary,Household Appliances
 NWL,Newell Brands,Consumer Discretionary,Housewares & Specialties
-AMZN,Amazon,Consumer Discretionary,Internet & Direct Marketing Retail
-BKNG,Booking Holdings,Consumer Discretionary,Internet & Direct Marketing Retail
-EBAY,eBay,Consumer Discretionary,Internet & Direct Marketing Retail
-ETSY,Etsy,Consumer Discretionary,Internet & Direct Marketing Retail
-EXPE,Expedia Group,Consumer Discretionary,Internet & Direct Marketing Retail
 HAS,Hasbro,Consumer Discretionary,Leisure Products
 CMG,Chipotle Mexican Grill,Consumer Discretionary,Restaurants
 DRI,Darden Restaurants,Consumer Discretionary,Restaurants
@@ -199,9 +198,9 @@ RF,Regions Financial Corporation,Financials,Regional Banks
 TFC,Truist,Financials,Regional Banks
 ZION,Zions Bancorporation,Financials,Regional Banks
 ACGL,Arch Capital Group,Financials,Reinsurance
-RE,Everest Re,Financials,Reinsurance
+EG,Everest Re,Financials,Reinsurance
 FIS,FIS,Financials,Transaction & Payment Processing Services
-FISV,Fiserv,Financials,Transaction & Payment Processing Services
+FI,Fiserv,Financials,Transaction & Payment Processing Services
 FLT,Fleetcor,Financials,Transaction & Payment Processing Services
 GPN,Global Payments,Financials,Transaction & Payment Processing Services
 JKHY,Jack Henry & Associates,Financials,Transaction & Payment Processing Services
@@ -356,6 +355,7 @@ FICO,Fair Isaac,Information Technology,Application Software
 GEN,Gen Digital,Information Technology,Application Software
 INTU,Intuit,Information Technology,Application Software
 ORCL,Oracle Corporation,Information Technology,Application Software
+PANW,Palo Alto Networks,Information Technology,Application Software
 PAYC,Paycom,Information Technology,Application Software
 PTC,PTC,Information Technology,Application Software
 CRM,Salesforce,Information Technology,Application Software
