@@ -33,8 +33,10 @@ GM,General Motors,Consumer Discretionary,Automobile Manufacturers
 TSLA,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers
 APTV,Aptiv,Consumer Discretionary,Automotive Parts & Equipment
 BWA,BorgWarner,Consumer Discretionary,Automotive Parts & Equipment
-AAP,Advance Auto Parts,Consumer Discretionary,Automotive Retail
+GPC,Genuine Parts Company,Consumer Discretionary,Automotive Parts & Equipment
+AZO,AutoZone,Consumer Discretionary,Automotive Retail
 KMX,CarMax,Consumer Discretionary,Automotive Retail
+ORLY,O'Reilly Auto Parts,Consumer Discretionary,Automotive Retail
 AMZN,Amazon,Consumer Discretionary,Broadline Retail
 EBAY,eBay,Consumer Discretionary,Broadline Retail
 ETSY,Etsy,Consumer Discretionary,Broadline Retail
@@ -53,15 +55,15 @@ DHI,D.R. Horton,Consumer Discretionary,Homebuilding
 LEN,Lennar,Consumer Discretionary,Homebuilding
 NVR,"NVR, Inc.",Consumer Discretionary,Homebuilding
 PHM,PulteGroup,Consumer Discretionary,Homebuilding
+ABNB,Airbnb,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+BKNG,Booking Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 CCL,Carnival,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
+EXPE,Expedia Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 HLT,Hilton Worldwide,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 MAR,Marriott International,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
 RCL,Royal Caribbean Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines"
-BKNG,Booking Holdings,Consumer Discretionary,"Hotels, Restaurants & Leisure"
-EXPE,Expedia Group,Consumer Discretionary,"Hotels, Restaurants & Leisure"
 WHR,Whirlpool Corporation,Consumer Discretionary,Household Appliances
-NWL,Newell Brands,Consumer Discretionary,Housewares & Specialties
 HAS,Hasbro,Consumer Discretionary,Leisure Products
 CMG,Chipotle Mexican Grill,Consumer Discretionary,Restaurants
 DRI,Darden Restaurants,Consumer Discretionary,Restaurants
@@ -69,10 +71,7 @@ DPZ,Domino's,Consumer Discretionary,Restaurants
 MCD,McDonald's,Consumer Discretionary,Restaurants
 SBUX,Starbucks,Consumer Discretionary,Restaurants
 YUM,Yum! Brands,Consumer Discretionary,Restaurants
-AZO,AutoZone,Consumer Discretionary,Specialty Stores
 BBWI,"Bath & Body Works, Inc.",Consumer Discretionary,Specialty Stores
-GPC,Genuine Parts Company,Consumer Discretionary,Specialty Stores
-ORLY,O'Reilly Auto Parts,Consumer Discretionary,Specialty Stores
 TSCO,Tractor Supply,Consumer Discretionary,Specialty Stores
 ULTA,Ulta Beauty,Consumer Discretionary,Specialty Stores
 ADM,ADM,Consumer Staples,Agricultural Products & Services
@@ -105,6 +104,7 @@ MDLZ,Mondelez International,Consumer Staples,Packaged Foods & Meats
 SJM,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats
 TSN,Tyson Foods,Consumer Staples,Packaged Foods & Meats
 EL,Estée Lauder Companies (The),Consumer Staples,Personal Care Products
+KVUE,Kenvue,Consumer Staples,Personal Care Products
 PG,Procter & Gamble,Consumer Staples,Personal Care Products
 KO,Coca-Cola Company (The),Consumer Staples,Soft Drinks & Non-alcoholic Beverages
 KDP,Keurig Dr Pepper,Consumer Staples,Soft Drinks & Non-alcoholic Beverages
@@ -137,6 +137,7 @@ TRGP,Targa Resources,Energy,Oil & Gas Storage & Transportation
 WMB,Williams Companies,Energy,Oil & Gas Storage & Transportation
 AMP,Ameriprise Financial,Financials,Asset Management & Custody Banks
 BLK,BlackRock,Financials,Asset Management & Custody Banks
+BX,Blackstone,Financials,Asset Management & Custody Banks
 BK,BNY Mellon,Financials,Asset Management & Custody Banks
 BEN,Franklin Templeton,Financials,Asset Management & Custody Banks
 IVZ,Invesco,Financials,Asset Management & Custody Banks
@@ -178,7 +179,6 @@ PFG,Principal Financial Group,Financials,Life & Health Insurance
 PRU,Prudential Financial,Financials,Life & Health Insurance
 BRK-B,Berkshire Hathaway,Financials,Multi-Sector Holdings
 AIZ,Assurant,Financials,Multi-line Insurance
-LNC,Lincoln Financial,Financials,Multi-line Insurance
 L,Loews Corporation,Financials,Multi-line Insurance
 ALL,Allstate,Financials,Property & Casualty Insurance
 AIG,American International Group,Financials,Property & Casualty Insurance
@@ -214,8 +214,8 @@ INCY,Incyte,Health Care,Biotechnology
 MRNA,Moderna,Health Care,Biotechnology
 REGN,Regeneron,Health Care,Biotechnology
 VRTX,Vertex Pharmaceuticals,Health Care,Biotechnology
-ABC,AmerisourceBergen,Health Care,Health Care Distributors
 CAH,Cardinal Health,Health Care,Health Care Distributors
+COR,Cencora,Health Care,Health Care Distributors
 HSIC,Henry Schein,Health Care,Health Care Distributors
 MCK,McKesson,Health Care,Health Care Distributors
 WAT,Waters Corporation,Health Care,Health Care Distributors
@@ -280,7 +280,7 @@ HII,Huntington Ingalls Industries,Industrials,Aerospace & Defense
 LHX,L3Harris,Industrials,Aerospace & Defense
 LMT,Lockheed Martin,Industrials,Aerospace & Defense
 NOC,Northrop Grumman,Industrials,Aerospace & Defense
-RTX,Raytheon Technologies,Industrials,Aerospace & Defense
+RTX,RTX Corporation,Industrials,Aerospace & Defense
 TXT,Textron,Industrials,Aerospace & Defense
 TDG,TransDigm Group,Industrials,Aerospace & Defense
 DE,John Deere,Industrials,Agricultural & Farm Machinery
@@ -450,17 +450,16 @@ WELL,Welltower,Real Estate,Health Care REITs
 HST,Host Hotels & Resorts,Real Estate,Hotel & Resort REITs
 VICI,Vici Properties,Real Estate,Hotel & Resort REITs
 PLD,Prologis,Real Estate,Industrial REITs
+AVB,AvalonBay Communities,Real Estate,Multi-Family Residential REITs
+CPT,Camden Property Trust,Real Estate,Multi-Family Residential REITs
+EQR,Equity Residential,Real Estate,Multi-Family Residential REITs
+ESS,Essex Property Trust,Real Estate,Multi-Family Residential REITs
+MAA,Mid-America Apartment Communities,Real Estate,Multi-Family Residential REITs
+UDR,"UDR, Inc.",Real Estate,Multi-Family Residential REITs
 ARE,Alexandria Real Estate Equities,Real Estate,Office REITs
 BXP,Boston Properties,Real Estate,Office REITs
 IRM,Iron Mountain,Real Estate,Other Specialized REITs
 CBRE,CBRE Group,Real Estate,Real Estate Services
-AVB,AvalonBay Communities,Real Estate,Residential REITs
-CPT,Camden Property Trust,Real Estate,Residential REITs
-EQR,Equity Residential,Real Estate,Residential REITs
-ESS,Essex Property Trust,Real Estate,Residential REITs
-INVH,Invitation Homes,Real Estate,Residential REITs
-MAA,Mid-America Apartment Communities,Real Estate,Residential REITs
-UDR,"UDR, Inc.",Real Estate,Residential REITs
 FRT,Federal Realty,Real Estate,Retail REITs
 KIM,Kimco Realty,Real Estate,Retail REITs
 O,Realty Income,Real Estate,Retail REITs
@@ -468,6 +467,7 @@ REG,Regency Centers,Real Estate,Retail REITs
 SPG,Simon Property Group,Real Estate,Retail REITs
 EXR,Extra Space Storage,Real Estate,Self-Storage REITs
 PSA,Public Storage,Real Estate,Self-Storage REITs
+INVH,Invitation Homes,Real Estate,Single-Family Residential REITs
 AMT,American Tower,Real Estate,Telecom Tower REITs
 CCI,Crown Castle,Real Estate,Telecom Tower REITs
 SBAC,SBA Communications,Real Estate,Telecom Tower REITs
