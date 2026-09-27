@@ -11,9 +11,9 @@ with Plotly Dash. Featured in Plotly's selection of top finance applications.
   constituent-level daily prices and IVV ETF weights
 - **US Treasury yield curve** — from 3-month to 30-year maturities
 - **PCA & clustering** — unsupervised analysis of S&P 500 constituents based on
-  daily return correlations: principal component analysis on the correlation
-  structure, with K-Means and hierarchical clustering grouping stocks by
-  co-movement
+  daily total returns over a rolling 2-year window: principal component analysis
+  followed by K-Means clustering, grouping stocks by co-movement rather than by
+  GICS sector
 - Interactive Plotly charts across multiple pages
 
 The PCA and clustering work started as a standalone project
