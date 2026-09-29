@@ -1,36 +1,46 @@
 # US Markets Dashboard
 
-Interactive multi-page dashboard for analysing US equity and rates markets, built
-with Plotly Dash. Featured in Plotly's selection of top finance applications.
+Interactive multi-page dashboard for analysing US equity and rates markets, built with
+Plotly Dash. Featured in Plotly's selection of top finance applications.
 
 **Live app:** https://markets-dash.onrender.com/
 
+![Yield curve historical evolution](images/yield_curve_histo_3d.png)
+
 ## What it does
 
-- **S&P 500 performance** — analysis by sector and sub-industry, using
-  constituent-level daily prices and IVV ETF weights
+- **S&P 500 performance** — analysis by sector and sub-industry, using constituent-level
+  daily prices and IVV ETF weights
 - **US Treasury yield curve** — from 3-month to 30-year maturities
-- **PCA & clustering** — unsupervised analysis of S&P 500 constituents based on
-  daily total returns over a rolling 2-year window: principal component analysis
-  followed by K-Means clustering, grouping stocks by co-movement rather than by
-  GICS sector
+- **PCA & clustering** — unsupervised analysis of S&P 500 constituents based on daily
+  total returns over a rolling 2-year window: principal component analysis followed by
+  K-Means clustering, grouping stocks by co-movement rather than by GICS sector
 - Interactive Plotly charts across multiple pages
+
+Correlation matrix before and after clustering — the block structure on the right shows
+stocks grouped by how they actually co-move:
+
+![Correlation matrices before and after clustering](images/correl_matrices.png)
+
+Stocks projected onto the top three principal components, coloured by cluster:
+
+![Top 3 principal components and 11 clusters](images/PC_3d_scatter.png)
 
 The PCA and clustering work started as a standalone project
 ([project_equity_clustering](https://github.com/GuillaumeRib/project_equity_clustering))
-and was later integrated as a page of this app.
+and was later integrated as a page of this app, in a lighter daily-returns variant.
 
 ## Data sources
 
 | Source | Data |
 |---|---|
-| FRED (pandas-datareader) | Monthly US Treasury yields, 3M to 30Y |
-| yfinance | Daily prices for S&P 500 constituents |
+| FRED (`pandas-datareader`) | Monthly US Treasury yields, 3M to 30Y |
+| `yfinance` | Daily prices for S&P 500 constituents |
 | Wikipedia (scraping) | S&P 500 tickers, sectors, sub-industries |
 | IVV ETF | Index constituent weights |
 
 ## Stack
 
 Python · pandas · scikit-learn · Plotly · Dash · pandas-datareader · yfinance · BeautifulSoup
-Deployed on Render.
 
+Deployed on Render.
